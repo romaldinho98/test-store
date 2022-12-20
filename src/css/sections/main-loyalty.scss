@@ -1,0 +1,111 @@
+.main-loyalty {
+    .page-top {
+        background-color: #ffd9f0;
+        position: relative;
+        background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom_revert.svg?v=1663318885");
+        background-position: left bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        box-shadow: inset 0px -2px 0px 0px $white;
+        &:after,
+        &::after {
+            z-index: 0;
+            width: 100%;
+            display: block;
+            content: '';
+            position: absolute;
+            background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/3d_render_coupon_concept_getting_discount_and_gift_from_online_shopping.png?v=1664283906");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: auto 115%;
+            height: 95%;
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            pointer-events: none;
+            @include media-breakpoint-up(md) {
+                max-width: 720px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 1024px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: 1260px;
+            }
+            @include media-breakpoint-down(sm) {
+                height: 94%;
+                background-position: center bottom;
+                background-size: 260px auto;
+                transform: translateX(-50%) scaleX(-1);
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            padding-top: 59px;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom_mobile.svg?v=1663319522");
+        }
+        & > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .main-page-title {
+        color: $black;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        max-width: 400px;
+    }
+    .main-page-desc {
+        max-width: 400px;
+        color: $gray;
+        line-height: 1.4;
+    }
+    .main-page-btns {
+        max-width: 400px;
+        margin-bottom: 100px;
+        margin-top: 30px;
+        a {
+            width: 180px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: none;
+            margin-bottom: 107px;
+            margin-top: 24px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+.section--loyalty-benefits {
+    position: relative;
+    &:before,
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -7%;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 600px;
+        height: 600px;
+        background: rgb(239, 154, 176);
+        filter: blur(200px);
+        will-change: filter;
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 0;
+        @include media-breakpoint-down(sm) {
+            width: 250px;
+            height: 250px;
+            left: -56px;
+            filter: blur(100px);
+            will-change: filter;
+            top: -10%;
+        }
+    }
+    .btn-white-border {
+        position: relative;
+        z-index: 10;
+    }
+}

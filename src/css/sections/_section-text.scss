@@ -1,0 +1,14 @@
+.text-block {
+    background-color: $primary;
+    padding: 40px 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: $white;
+    @include media-breakpoint-down(sm) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+}

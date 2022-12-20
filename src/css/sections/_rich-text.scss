@@ -1,0 +1,97 @@
+.rich-text {
+    @include media-breakpoint-down(md) {
+        padding: 80px 0 !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 73px 0 !important;
+    }
+
+    h2 {
+        color: $white;
+    }
+
+    &__wrapper {
+        @include media-breakpoint-down(sm) {
+            width: 100% !important;
+        }
+    }
+
+    &__text {
+        max-width: 490px;
+        margin: 15px auto 30px !important;
+
+        @include media-breakpoint-down(xs) {
+            margin: 12px auto 24px !important;
+        }
+
+        p {
+            color: $white;
+            line-height: 24px;
+            @include media-breakpoint-down(sm) {
+                line-height: 21px;
+            }
+        }
+    }
+
+    .btn-white-border {
+        margin-top: 0 !important;
+
+        @include media-breakpoint-down(xs) {
+            width: 100%;
+        }
+    }
+}
+
+.rich-text--wholesale {
+    .rich-text {
+        @media screen and (max-width: 1050px) {
+            padding-top: 50px !important;
+            padding-bottom: 72px !important; 
+        }
+        &__wrapper {
+            align-items: center;
+            gap: 40px;
+            @media screen and (max-width: 1053px) {
+                flex-direction: column;
+            }
+        }
+        &__img {
+            width: 599px;
+            height: 476px;
+            object-fit: cover;
+            transform: scaleX(-1);
+            border: 5px solid #52C1D1;
+            border-radius: 40px;
+            @media screen and (max-width: 1199px) {
+                width: 499px;
+                height: 376px;
+            }
+            @include media-breakpoint-down(xs) {
+                width: 100%;
+                height: 250px;
+            }
+        }
+        &__text {
+            line-height: 24px;
+            @include media-breakpoint-down(sm) {
+                line-height: 21px;
+            }
+        }
+    }
+
+    .content-container--full-width:after {
+        background: #EF9AB0;
+        height: 400px;
+        top: calc(50% - 200px);
+        @media screen and (max-width: 1199px) {
+            height: 300px;
+            top: calc(50% - 150px);
+        }
+
+        @media screen and (max-width: 1053px) {
+            top: 188px;
+            height: 80%;
+        }
+    }
+}

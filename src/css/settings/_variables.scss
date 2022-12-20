@@ -1,0 +1,40 @@
+// --------------------------------------------------
+// Type
+
+$font-family-base: "Montserrat", sans-serif !important;
+
+$headings-font-family: "Arsenal", sans-serif !important;
+
+// --------------------------------------------------
+// Colors
+
+$primary: #52c1d1;
+$black: #001623;
+$white: #fff;
+$gray: #525c62;
+$text: #525c62;
+$pink: #ef9ab0;
+$yaellow: #fee4a7;
+$blissull_blue: #d9e8f3;
+
+// --------------------------------------------------
+// Links
+$link-hover-decoration: none;
+
+// --------------------------------------------------
+// Buttons
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1054px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1024px,
+  xl: 1260px,
+);

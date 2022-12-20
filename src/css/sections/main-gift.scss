@@ -1,0 +1,50 @@
+.gift-card-plugin {
+    #MainContent {
+        padding-bottom: 80px !important;
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 56px !important;
+        }
+    }
+    .instagram-feed {
+        padding-top: 99px;
+    }
+}
+
+.gc__layout_wrapper {
+    margin-top: 80px;
+    @media (min-width: 992px) and (max-width: 1024px) {
+        display: block !important;
+        .gc__giftcard_page {
+            width: 100%;
+            margin: 0;
+            max-width: 100%;
+            min-width: 100%;
+            border: none;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        margin-top: 40px;
+    }
+    .gc__breadcrumbs {
+        @include media-breakpoint-down(sm) {
+            overflow: auto;
+        }
+    }
+    .gc__giftcard_preview {
+        width: 100%;
+        padding-right: 0;
+        @include media-breakpoint-down(md) {
+            padding-right: 15px;
+        }
+    }
+    img[src="https://gift-card-pro-uploads.s3.us-west-2.amazonaws.com/not-found.jpg?key=b4b147bc522828731f1a016bfa72c073"]
+    {
+        opacity: 0;
+    }
+    .gc__step_active {
+        padding-bottom: 100px;
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 0;
+        }
+    }
+}

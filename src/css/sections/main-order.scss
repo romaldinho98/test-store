@@ -1,0 +1,123 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN ORDER
+// ==========================================================================
+.template-customers-order {
+    #MainContent {
+        position: relative;
+        z-index: 0;
+        &::before {
+            position: absolute;
+            left: -10%;
+            bottom: -40%;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $pink;
+            filter: blur(400px);
+            opacity: 0.4;
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                top: 15%;
+                left: -10%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &::after {
+            position: absolute;
+            right: -10%;
+            top: -40%;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $yellow;
+            filter: blur(400px);
+            opacity: 0.4;
+            transform: scaleX(-1);
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                right: -5%;
+                left: auto;
+                bottom: 0;
+                width: 250px;
+                height: 250px;
+                background: $yellow;
+            }
+        }
+    }
+
+    .order {
+        margin-bottom: 220px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 60px !important;
+        }
+        &__title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0 70px;
+            h1 {
+                text-transform: uppercase;
+                color: $primary;
+            }
+        }
+        &__body {
+            h2 {
+                color: $black;
+            }
+            * {
+                color: $gray;
+            }
+            table {
+                box-shadow: none;
+                border: 1px solid $primary;
+                @include media-breakpoint-down(sm) {
+                    border: none;
+                }
+                * {
+                    border-color: $primary !important;
+                }
+                thead::after {
+                    background-color: $primary;
+                }
+                tfoot::before {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+
+    .gradient-link {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary !important;
+        text-decoration: none !important;
+        padding-bottom: 3px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                rgba(82, 193, 209, 1) 0%,
+                rgba(167, 144, 206, 1) 35%,
+                rgba(239, 154, 176, 1) 100%
+            );
+        }
+    }
+}

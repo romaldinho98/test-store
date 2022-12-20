@@ -1,0 +1,30 @@
+.collections-links-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin: 0 15px 15px 0;
+    display: inline-block;
+    a {
+      padding: 13px 30px;
+      white-space: nowrap;
+      color: $text;
+      line-height: 24px;
+      @include media-breakpoint-down(sm) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    &.active a {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    flex-wrap: nowrap;
+    max-width: 80vw;
+    max-width: calc(100vw - 30px);
+    overflow: auto;
+  }
+}

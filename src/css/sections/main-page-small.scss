@@ -1,0 +1,34 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN PAGE SMALL
+// ==========================================================================
+.template-page {
+    &.template-sf-default-small {
+        .instagram-feed {
+            display: none !important;
+        }
+    }
+}
+.template-page.template-sf-default-small {
+    .default-page {
+        .container {
+            &::before {
+                top: -75%;
+                background-color: $yellow;
+            }
+            &::after {
+                right: -45%;
+                bottom: -25%;
+                @include media-breakpoint-down(sm) {
+                    right: -20%;
+                    bottom: 5%;
+                }
+            }
+        }
+    }
+    .main-page-text {
+        &::before,
+        &::after {
+            content: none !important;
+        }
+    }
+}

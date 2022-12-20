@@ -1,0 +1,89 @@
+.locations {
+  padding-top: 80px;
+  @include media-breakpoint-down(sm) {
+    padding-top: 44px;
+  }
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    background-color: $blissull_blue;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+      padding-top: 56px;
+      padding-bottom: 95px;
+    }
+  }
+  h2 {
+    color: $primary;
+  }
+  &__container {
+    max-width: 1050px;
+    @include media-breakpoint-down(md) {
+      max-width: 720px;
+    }
+    @include media-breakpoint-down(sm) {
+      max-width: 540px;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-top: 56px;
+      justify-content: center;
+      align-items: center;
+    }
+    li {
+      list-style: none;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    text-decoration: none;
+    &:hover {
+      h3 {
+        padding-left: 8px;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      gap: 22px;
+    }
+    h3 {
+      color: $white;
+      max-width: 250px;
+      transition: all .2s ease-in-out;
+      @include media-breakpoint-down(md) {
+        max-width: initial;
+      }
+      @include media-breakpoint-down(xs) {
+        max-width: 200px;
+      }
+    }
+    svg {
+      max-width: 85px;
+    }
+  }
+}
+
+.template-index, 
+.template-sf-catering, 
+.template-sf-fundraising,
+.template-sf-wholesale,
+.template-sf-our-story,
+.template-404,
+.template-customers-register,
+.template-customers-login,
+.template-customers-account,
+.template-cart {
+  .locations {
+    padding-top: 0;
+  }
+}
+
+

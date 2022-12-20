@@ -1,0 +1,404 @@
+.event-form {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $blissull_blue;
+  position: relative;
+  @include media-breakpoint-down(sm) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  &::after {
+    position: absolute;
+    left: -20%;
+    top: 750px;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 600px;
+    height: 600px;
+    background: #fee4a7;
+    filter: blur(200px);
+    will-change: filter;
+    opacity: 0.4;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    pointer-events: none;
+    z-index: 1;
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+  h2 {
+    text-align: center;
+    color: $primary;
+  }
+  &__wrapper {
+    position: relative;
+    &:before, &::after {
+      position: absolute;
+      content: "";
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      z-index: 2;
+      @media (max-width: 1150px) {
+        display: none;
+      } 
+    }
+    &:before {
+      background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/kisspng-chocolate-chip-cookie-gocciole-biscuits-biscuit-cookie-5b08a3b368a8b5_1_5d78f008-f5ec-4a2f-863a-3f000a5e1091.png?v=1664886078");
+      top: 655px;
+      left: 0;
+      width: 100%;
+      max-width: 300px;
+      max-height: 890px;
+    }
+    &:after {
+      background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/biscuit_PNG35_1.png?v=1664886078");
+      top: -40px;
+      right: 0;
+      width: 100%;
+      max-width: 252px;
+      max-height: 452px;
+    }
+
+  }
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+      margin-top: 40px;
+    }
+    .globo-formbuilder {
+      .globo-form-app .content {
+        justify-content: space-between;
+        margin: 0;
+      }
+      .globo-form-app {
+        margin-bottom: 0;
+      }
+      .globo-label {
+        @include media-breakpoint-down(sm) {
+          font-size: 20px !important;
+          line-height: 24px !important;
+        }
+      }
+      .globo-form-app .globo-form-control {
+        margin-bottom: 30px;
+        padding: 0 !important;
+        &:nth-child(5) {
+          margin-bottom: 20px;
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 16px;
+        }
+      }
+      .layout-1-column, .layout-2-column {
+        z-index: 4;
+      }
+      .layout-2-column {
+        width: 100%;
+        max-width: 295px;
+        @include media-breakpoint-down(sm) {
+          max-width: initial;
+        }
+      } 
+      .globo-label, .globo-heading, .globo-title, .text-danger {
+        font-weight: 400 !important;
+        font-size: 24px !important;
+        line-height: 29px !important;
+        color: $black !important;
+        margin-bottom: 0 !important; 
+        @include media-breakpoint-down(sm) {
+          font-size: 20px !important;
+          line-height: 24px !important;
+        }
+        span {
+          font-family: $headings-font-family;
+          color: $black !important;
+          z-index: 4;
+        }
+      }
+      // p {
+      //   visibility: hidden !important;
+      // }
+      input {
+        font-size: 16px !important;
+        height: 50px !important;
+        color: $text !important;
+        border: 2px solid $primary !important;
+        border-radius: 50px !important;
+        padding: 13px 30px !important;
+        margin-top: 15px !important;
+        background-color: $white !important;
+        z-index: 4;
+        @include media-breakpoint-down(sm) {
+          margin-top: 12px !important;
+        } 
+        &:hover {
+          border-color: $primary !important;
+        }
+        &::-webkit-input-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+        }
+        &::-moz-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+        &:-ms-input-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+        &:-moz-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+      }
+      textarea {
+        font-size: 16px !important;
+        color: $text !important;
+        border: 2px solid $primary !important;
+        border-radius: 10px !important;
+        padding: 15px 30px !important;
+        margin-top: 15px !important;
+        background-color: $white !important;
+        min-height: 150px;
+        resize: none;
+        z-index: 4;
+        @include media-breakpoint-down(sm) {
+          margin-top: 12px !important;
+        } 
+        &::-webkit-input-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+          @include media-breakpoint-down(sm) {
+            opacity: 1 !important;
+          } 
+        }
+        &::-moz-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+        &:-ms-input-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+        &:-moz-placeholder {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #CBCED0 !important;
+          opacity: 0.5 !important;
+        }
+      }
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover, 
+      input:-webkit-autofill:focus,
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus {
+        border: 2px solid $primary !important;
+        -webkit-text-fill-color: $text !important;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+      button {
+        position: relative;
+        font-family: $headings-font-family;
+        background: $primary !important;
+        height: 50px !important;
+        margin-top: 0px !important;
+        box-shadow: 0px 2px 10px rgba(0, 22, 35, 0.15) !important;
+        border-radius: 50px !important;
+        color: transparent !important;
+        transition: 0.3s;
+        cursor: pointer;
+        z-index: 4;
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          content: "SEND";
+          color: $white !important;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: center;
+          letter-spacing: 0.1em !important;
+          text-transform: uppercase;
+          transition: 0.3s;
+          z-index: 3;
+          cursor: pointer;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          background: linear-gradient(86.79deg, #52C1D1 4.92%, #A790CE 51.18%, #EF9AB0 95.93%);
+          display: block;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: 50px !important;
+          transition: 0.3s;
+          z-index: 2;
+          opacity: 0;
+          cursor: pointer;
+        }
+        &:hover {
+          border: none !important;
+          &::before {
+              color: $white !important;
+          }
+          &::after {
+              opacity: 1 !important;
+          }
+        }
+      }
+      .footer {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+.template-sf-catering {
+  .event-form {
+    margin-top: -75px;
+    padding-top: 235px;
+    @include media-breakpoint-down(lg) {
+      margin-top: 19px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 50px;
+      padding-top: 175px;
+    }
+    @include media-breakpoint-down(xs) {
+      padding-top: 131px;
+    }  
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -1px;
+      left: 0px;
+      right: 0px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      min-height: 400px;
+      background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/white_wave_form.svg?v=1664885416");
+      @media (max-width: 2100px) {
+        min-height: 300px;
+      }
+      @media (max-width: 1800px) {
+        min-height: 250px;
+      }
+      @media (max-width: 1440px) {
+        min-height: 195px;
+      }
+      @include media-breakpoint-down(sm) {
+        min-height: 170px;
+        background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/white_wave_mb_event.svg?v=1664956214");
+      }
+      @include media-breakpoint-down(xs) {
+        min-height: 125px;
+      }
+      @media (max-width: 400px) {
+        min-height: 80px;
+      }
+    }
+  }
+}
+
+.template-sf-wholesale {
+  .event-form {
+    &:after {
+      @include media-breakpoint-down(md) {
+        display: initial;
+        width: 250px;
+        height: 250px;
+        filter: blur(100px);
+        top: 670px;
+      }
+    }
+    &::before {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        margin: auto;
+        content: "";
+        display: block;
+        background: #EF9AB0;
+        filter: blur(100px);
+        will-change: filter;
+        opacity: 0.4;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        pointer-events: none;
+        z-index: 1;
+        display: initial;
+        width: 250px;
+        height: 250px;
+        top: 850px;
+        right: -25px;
+      }
+    }
+    &__wrapper {
+      position: relative;
+      &:before, &::after {
+        @media (max-width: 1150px) {
+          display: initial;
+        } 
+      }
+      &:before {
+        top: 500px;
+        left: 0;
+        @include media-breakpoint-down(md) {
+          background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/cookie_decorative_mb.png?v=1664960238");
+          max-width: 196px;
+          max-height: 449px;
+          top: initial;
+          bottom: -205px;
+        }
+      }
+      &:after {
+        top: 320px;
+        right: 0;
+        @include media-breakpoint-down(md) {
+          background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/biscuit_decorative.png?v=1664960240");
+          max-width: 199px;
+          max-height: 327px;
+          top: 55px;
+        }
+      }
+    }
+  }
+}

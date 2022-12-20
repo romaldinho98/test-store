@@ -1,0 +1,81 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN LIST COLLECTION
+// ==========================================================================
+.section--collection {
+  background-color: $blissull_blue;
+  background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom.svg?v=1663232116");
+  background-position: left bottom 322px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: inset 0px -322px 0px 1px $white;
+  .container {
+    position: relative;
+    z-index: 3;
+  }
+  .collection {
+    [class*="col"] {
+      position: relative;
+      &:hover {
+        z-index: 2;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      li.mb-5 {
+        margin-bottom: 17px !important;
+      }
+    }
+  }
+  &:before,
+  &::before {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 600px;
+    height: 600px;
+    background: rgb(239, 154, 176);
+    filter: blur(200px);
+    will-change: filter;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 2;
+    @include media-breakpoint-down(sm) {
+      width: 250px;
+      height: 250px;
+      left: -81px;
+      filter: blur(100px);
+      will-change: filter;
+      top: 6%;
+    }
+  }
+  &:after,
+  &::after {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 600px;
+    height: 600px;
+    background: $primary;
+    filter: blur(200px);
+    will-change: filter;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 2;
+    @include media-breakpoint-down(sm) {
+      width: 250px;
+      height: 250px;
+      right: -81px;
+      filter: blur(100px);
+      will-change: filter;
+      bottom: 5%;
+    }
+  }
+}
+
+

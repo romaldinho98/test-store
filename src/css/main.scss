@@ -1,0 +1,127 @@
+// ==========================================================================
+// ## LAYOUT: BASE
+// ==========================================================================
+// Variables (replace Bootstrap variable defaults)
+@import './settings/variables';
+
+@import './mixins/helpers';
+
+// --------------------------------------------------
+// Bootstrap
+
+@import "~bootstrap-scss/functions";
+@import "~bootstrap-scss/variables";
+@import "~bootstrap-scss/mixins";
+@import "~bootstrap-scss/utilities";
+@import "~bootstrap-scss/grid";
+
+/// @content
+///   DO NOT ADD CLASSES OR RULES IN THIS FILE DIRECTLY.
+///   Instead, use imports to add extensions or snippets you made along the project.
+///
+///
+/// Production build weights only ~25kb (~4kb gzipped)
+///
+
+/// - SETTINGS & TOOLS (MUST BE AT THE TOP)
+/// Common settings and tools.
+//
+
+@import './mixins/type';
+
+@import './settings/type';
+
+/// - GENERIC
+/// Reset............A level playing field using @necolas’s Normalize.
+/// Print................Reset-like styles for print media.
+/// Elements.............Sensibly and tersely share some global commonalities.
+///
+@import './generic/reset';
+@import './generic/print';
+
+/// - COMPONENTS
+// Build and include your project’s UI components.
+// Uncomment and add to this as necessary.
+///
+/// Button..............Specific styles for btn component and its variations.
+/// Typeface............Specific styles for heading component and its size variations.
+/// Field...............Specific styles for field and input component.
+///
+@import './components/button';
+@import './components/field';
+@import './components/global';
+@import './components/breadcrumbs';
+@import './components/pagination';
+@import './components/facets';
+@import './components/select';
+@import './components/collections-links-list';
+@import './components/cookie-line';
+
+/// - SECTIONS
+// These are base section.
+///
+/// Header..............Shopify static section.
+/// Footer..............Shopify static section.
+///
+@import './sections/header';
+@import './sections/footer';
+@import './sections/hero-slider';
+@import './sections/map-section';
+@import './sections/review';
+@import './sections/instafeed';
+@import './sections/rich-text';
+@import './sections/multicolumn';
+@import './sections/link-section';
+@import './sections/text-and-img-blocks';
+@import './sections/product-card';
+@import './sections/product-card-gift';
+@import './sections/featured-collection-slider';
+@import './sections/feature-coll';
+@import './sections/section-address';
+@import './sections/main-collection';
+@import './sections/main-collection-gift';
+@import './sections/main-list-collection';
+@import './sections/main-product';
+@import './sections/collapsible-product';
+@import './sections/stamped-main-widget';
+@import './sections/main-nutritional';
+@import './sections/main-loyalty';
+@import './sections/main-wholesale';
+@import './sections/gs-builder-override';
+@import './sections/main-page';
+@import './sections/loyalty-benefits';
+@import './sections/main-page-small';
+@import './sections/loyalty-benefits-table';
+@import './sections/loyalty-how-it-works';
+@import './sections/main-contact';
+@import './sections/main-account';
+@import './sections/main-login';
+@import './sections/main-register';
+@import './sections/main-adresses';
+@import './sections/main-order';
+
+@import './sections/main-gift';
+@import './sections/contact-form-delivery';
+@import './sections/three-steps';
+@import './sections/faq';
+@import './sections/main-fundraising';
+@import './sections/fundraising-how-it-works';
+@import './sections/main-catering';
+@import './sections/cart-drawer';
+@import './sections/text-image-arrows-section';
+@import './sections/main-cart';
+@import './sections/email-join-now-section';
+@import './sections/event-form';
+@import './sections/following-form';
+@import './sections/form-keep-the-donation';
+@import './sections/section-text';
+@import './sections/recetly-slider';
+@import './sections/main-search';
+@import './sections/multishipping-page';
+@import './sections/page-404';
+@import './sections/text-and-img-block-home';
+@import './sections/locations-sections';
+@import './sections/subscribe-for-news';
+@import './sections/hero-slider-new';
+@import './sections/main-thank-page';
+

@@ -1,0 +1,358 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN LOGIN
+// ==========================================================================
+.template-customers-login {
+    .breadcrumb {
+        padding: 15px 0 31px;
+        @include media-breakpoint-down(sm) {
+            padding: 25px 0 49px;
+        }
+    }
+    h1 {
+        text-transform: uppercase;
+        color: $primary;
+        margin-bottom: 15px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+        }
+    }
+    p {
+        color: $black;
+        line-height: 24px;
+        @include media-breakpoint-down(sm) {
+            line-height: 21px;
+        }
+    }
+    #MainContent {
+        position: relative;
+        z-index: 0;
+        &::before {
+            position: absolute;
+            top: -11%;
+            left: 0;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $pink;
+            filter: blur(400px);
+            opacity: 0.4;
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                top: 15%;
+                left: -10%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &::after {
+            position: absolute;
+            right: -5%;
+            bottom: -15%;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $primary;
+            filter: blur(400px);
+            opacity: 0.4;
+            transform: scaleX(-1);
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                right: -5%;
+                left: auto;
+                bottom: 0;
+                width: 250px;
+                height: 250px;
+                background: $yellow;
+            }
+        }
+        .img-coockie {
+            position: absolute;
+            left: 0;
+            top: 15%;
+            width: 275px;
+            height: 576px;
+            display: block;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/cookie.png?v=1663833410");
+            background-position: left;
+            background-size: contain;
+            pointer-events: none;
+            z-index: -1;
+            @include media-breakpoint-down(md) {
+                width: 185px;
+                height: 420px;
+            }
+            @include media-breakpoint-down(sm) {
+                width: 130px;
+                height: 280px;
+                left: auto;
+                right: 0;
+                top: auto;
+                bottom: 13%;
+                background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/cookie_2.png?v=1663833744");
+                background-position: right center;
+                background-size: contain;
+            }
+        }
+    }
+    .login {
+        position: relative;
+        z-index: 2;
+        margin-top: 0 !important;
+        margin-bottom: 160px !important;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 100px !important;
+        }
+        p {
+            margin-bottom: 30px;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 56px;
+            }
+        }
+        .btn-blue-gradient {
+            width: 100%;
+            margin-bottom: 15px;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 12px;
+            }
+            span {
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+        .btn-white-border {
+            width: 100%;
+            display: inline-flex;
+            border: 2px solid #52c1d1;
+            box-shadow: 0px 2px 10px rgb(0 22 35 / 15%);
+            transition: 0.3s;
+            color: $primary;
+            font-size: 16px;
+            margin-bottom: 10px;
+            background-color: $white;
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            &:hover {
+                color: $white;
+                background: $primary;
+            }
+        }
+        .btn-recover {
+            text-align: right;
+            margin: 20px 0 35px auto;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $black;
+            text-decoration: none;
+            border-bottom: 1px solid $primary;
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 21px;
+                margin: 23px 0 56px auto;
+            }
+        }
+        .gradient-link {
+            margin: 20px auto;
+        }
+        .not-found {
+            text-align: center;
+            font-size: 32px;
+            color: $black;
+            @include media-breakpoint-down(sm) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    .recovery-password {
+        .btn-blue-gradient {
+            margin: 20px 0;
+        }
+        form {
+            > a {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $black;
+                text-decoration: none;
+                border-bottom: 1px solid $primary;
+            }
+        }
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 30px !important;
+        @include media-breakpoint-down(sm) {
+            margin-top: 16px !important;
+        }
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        label {
+            position: static !important;
+            font-family: $headings-font-family;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-size: 24px !important;
+            line-height: 29px !important;
+            letter-spacing: normal !important;
+            color: $black !important;
+            box-shadow: none;
+            margin-bottom: 15px !important;
+            background-color: transparent;
+            text-align: left;
+            @include media-breakpoint-down(sm) {
+                font-size: 20px !important;
+                line-height: 24px !important;
+                margin-bottom: 12px !important;
+            }
+            span {
+                font-family: inherit;
+            }
+        }
+        input {
+            padding: 16px 15px 16px 30px !important;
+            background: $white;
+            border: 2px solid $primary;
+            border-radius: 50px !important;
+            min-height: 50px;
+            max-height: 50px;
+            font-size: 16px;
+            &::-webkit-input-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &::-moz-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &:-ms-input-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &:-moz-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .gradient-link {
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $primary !important;
+        text-decoration: none !important;
+        padding-bottom: 3px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: linear-gradient(
+                90deg,
+                rgba(82, 193, 209, 1) 0%,
+                rgba(167, 144, 206, 1) 35%,
+                rgba(239, 154, 176, 1) 100%
+            );
+        }
+    }
+}
+
+.template-customers-reset_password {
+    h1 {
+        text-transform: uppercase;
+        color: $primary;
+        margin-bottom: 15px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+        }
+    }
+    p {
+        color: $black;
+    }
+    .field {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 30px !important;
+        @include media-breakpoint-down(sm) {
+            margin-top: 16px !important;
+        }
+        &::before,
+        &::after {
+            content: none;
+        }
+
+        label {
+            position: static !important;
+            font-family: $headings-font-family;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-size: 24px !important;
+            line-height: 29px !important;
+            letter-spacing: normal !important;
+            color: $black !important;
+            box-shadow: none;
+            margin-bottom: 15px !important;
+            background-color: transparent;
+            text-align: left;
+            @include media-breakpoint-down(sm) {
+                font-size: 20px !important;
+                line-height: 24px !important;
+                margin-bottom: 12px !important;
+            }
+            span {
+                font-family: inherit;
+            }
+        }
+        input {
+            padding: 16px 15px 16px 30px !important;
+            background: $white;
+            border: 2px solid $primary;
+            border-radius: 50px !important;
+            min-height: 50px;
+            max-height: 50px;
+            font-size: 16px;
+            &::-webkit-input-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &::-moz-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &:-ms-input-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+            &:-moz-placeholder {
+                opacity: 0.5 !important;
+                font-size: 16px;
+            }
+        }
+    }
+    .btn-blue-gradient {
+        width: 100%;
+        margin: 20px 0;
+    }
+}

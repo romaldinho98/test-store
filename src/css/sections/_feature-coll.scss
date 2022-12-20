@@ -1,0 +1,148 @@
+.feature-coll {
+    background: $blissull_blue;
+    padding-top: 80px;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        padding-top: 100px;
+        padding-bottom: 26px;
+    }
+    .collection {
+        padding-top: 0;
+    }
+    .collection__title {
+        text-align: center;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 75px;
+            color: $primary;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1px;
+            }
+        }
+    }
+    .row {
+        list-style: none;
+        > li {
+            padding-bottom: 112px;
+            @include media-breakpoint-down(md) {
+                padding-bottom: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 15px;
+            }
+        }
+    }
+    .product-card {
+        &::before,
+        &::after {
+            content: none !important;
+        }
+        product-form {
+            opacity: 1;
+        }
+        .card__content {
+            position: static !important;
+            background-color: transparent;
+            .card__badge {
+                display: none;
+            }
+        }
+        .card__inner {
+            border-radius: 0 !important;
+            background-color: transparent !important;
+            &::before {
+                @include media-breakpoint-down(sm) {
+                    padding-bottom: 260px;
+                }
+                @include media-breakpoint-down(xs) {
+                    padding-bottom: 220px;
+                }
+            }
+            .card__media {
+                border-radius: 0 !important;
+                background-color: transparent !important;
+                .media {
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    max-width: 225px;
+                    max-height: 225px;
+                    background-color: transparent !important;
+                    border-radius: 10px;
+                    @include media-breakpoint-down(xs) {
+                        margin-bottom: 16px;
+                    }
+                }
+            }
+        }
+
+        .card__information {
+            @include media-breakpoint-down(xs) {
+                padding: 0 0 30px !important;
+            }
+        }
+
+        .price {
+            text-align: center;
+            margin-top: 15px !important;
+            .price__sale {
+                .price-item--regular {
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 22px;
+                    text-align: center;
+                    text-decoration-line: line-through;
+                    color: $gray;
+                    margin-right: 10px;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 15px;
+                        line-height: 18px;
+                    }
+                }
+                .price-item--last {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: $primary;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            .price__regular {
+                .price-item--regular {
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: $primary;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .add-cart {
+        position: static;
+        .product-form__buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            button {
+                @include media-breakpoint-down(xs) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .card {
+        flex-direction: row !important;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column !important;
+        }
+    }
+}

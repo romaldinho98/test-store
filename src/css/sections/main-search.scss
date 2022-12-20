@@ -1,0 +1,181 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN SEARCH
+// ==========================================================================
+
+div.template-search {
+    background-color: $blissull_blue;
+    background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom.svg?v=1663232116");
+    background-position: left bottom 320px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: inset 0px -322px 0px 0px $white;
+
+    .container {
+        position: relative;
+        z-index: 3;
+    }
+
+    .collection {
+        [class*="col"] {
+            position: relative;
+
+            &:hover {
+                z-index: 2;
+            }
+        }
+    }
+
+    &:before,
+    &::before {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 600px;
+        height: 600px;
+        background: rgb(239, 154, 176);
+        filter: blur(200px);
+        will-change: filter;
+        opacity: 0.4;
+        pointer-events: none;
+        z-index: 2;
+
+        @include media-breakpoint-down(sm) {
+            width: 250px;
+            height: 250px;
+            left: -81px;
+            filter: blur(100px);
+            will-change: filter;
+            top: 6%;
+        }
+    }
+
+    &:after,
+    &::after {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 600px;
+        height: 600px;
+        background: $primary;
+        filter: blur(200px);
+        will-change: filter;
+        opacity: 0.2;
+        pointer-events: none;
+        z-index: 2;
+
+        @include media-breakpoint-down(sm) {
+            width: 250px;
+            height: 250px;
+            right: -81px;
+            filter: blur(100px);
+            will-change: filter;
+            bottom: 5%;
+        }
+    }
+
+
+    &__header {
+        margin-bottom: 40px;
+
+        .no-results {
+            margin: 10px 0;
+        }
+
+        h1 {
+            color: $primary;
+            margin-bottom: 40px;
+        }
+    }
+
+    @media screen and (max-width: 989px) {
+        .facets-container {
+            column-gap: 0;
+        }
+    }
+
+
+    &__search {
+        width: 600px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 989px) {
+            max-width: none;
+            width: 100%;
+        }
+
+        .field {
+            background: $white;
+            border: 2px solid $primary;
+            border-radius: 50px;
+            padding: 0 20px;
+
+            &__input {
+                padding: 0 !important;
+
+                &::placeholder {
+                    color: #CBCED0;
+                }
+            }
+
+            &::before,
+            &::after {
+                content: none;
+            }
+
+            button {
+                right: 20px;
+            }
+        }
+    }
+
+    .pagination {
+        &-wrapper {
+            margin-top: 50px;
+
+            @include media-breakpoint-down(md) {
+                margin-top: 30px;
+            }
+        }
+
+        &__list>li {
+            max-width: 20px;
+        }
+
+        &__item {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: $primary;
+
+            &--current {
+                font-weight: 600;
+            }
+
+            &--current::after,
+            &:hover::after {
+                content: none;
+            }
+        }
+
+        &__item--next {
+            color: transparent !important;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/arrow-pag-prev.svg?v=1663151071");
+            background-position: center;
+            background-size: 12px;
+        }
+
+        &__item--prev {
+            color: transparent !important;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/arrow-pag.svg?v=1663150967");
+            background-position: center;
+            background-size: 12px;
+        }
+    }
+}

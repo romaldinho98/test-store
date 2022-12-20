@@ -1,0 +1,182 @@
+.main-wholesale {
+
+    .page-top {
+        position: relative;
+
+        @include media-breakpoint-down(md) {
+            padding-top: 60px;
+            padding-bottom: 60px !important;
+        }
+
+        &::before {
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            content: '';
+            position: absolute;
+            max-width: none !important;
+            bottom: -1px;
+            left: 0;
+            right: 0px;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom_revert.svg?v=1663318885");
+            background-size: 105% auto;
+            background-position: bottom;
+        }
+
+        &:after,
+        &::after {
+            width: 100%;
+            display: block;
+            content: '';
+            position: absolute;
+            max-width: none !important;
+            background: #FFEDF3;
+            background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/3d_background_coupons_with_percent_flying_yellows_tickets_pink_and.png?v=1664974775");
+            background-repeat: no-repeat;
+            background-position: -245px bottom;
+            transform: scaleX(-1);
+            background-size: auto 100%;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+
+            @include media-breakpoint-down(xs) {
+                background-size: auto 50%;
+                transform: none;
+                background-position: -50px 340px;
+            }
+        }
+
+        &>* {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .main-page-title {
+        color: $primary;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        max-width: 500px;
+    }
+    .main-page-desc {
+        max-width: 500px;
+        color: $gray;
+        font-size: 16px;
+        line-height: 24px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .main-page-btns {
+        max-width: 400px;
+        margin-bottom: 100px;
+        a {
+            width: 285px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: none;
+            margin-top: 24px !important;
+            margin-bottom: 140px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+
+    .simple-translate-system-theme {
+        display: none !important; 
+    }
+}
+/*
+.main-wholesale {
+    .page-top {
+        background-color: #FFEDF3;
+        position: relative;
+        background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom_revert.svg?v=1663318885");
+        background-position: left bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        &:after,
+        &::after {
+            z-index: 0;
+            width: 100%;
+            display: block;
+            content: '';
+            position: absolute;
+            background-image: url("https://cdn.shopify.com/s/files/1/0655/4471/6515/files/3d_background_coupons_with_percent_flying_yellows_tickets_pink_and.png?v=1664974775");
+            background-repeat: no-repeat;
+            background-position: right bottom;
+            background-size: auto 100%;
+            height: 94%;
+            top: 0;
+            left: 46%;
+            bottom: 0;
+            transform: scaleX(-1);
+            pointer-events: none;
+            @include media-breakpoint-up(md) {
+                max-width: 720px;
+            }
+            @include media-breakpoint-up(lg) {
+                max-width: 1024px;
+            }
+            @include media-breakpoint-up(xl) {
+                max-width: 1260px;
+            }
+            @include media-breakpoint-down(sm) {
+                height: 98%;
+                background-position: right bottom;
+                background-size: 260px auto;
+
+                //transform: translateX(-50%) scaleX(-1);
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 120px;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_bottom_mobile.svg?v=1663319522");
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 140px;
+            }
+        }
+        & > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .main-page-title {
+        color: $primary;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        max-width: 500px;
+    }
+    .main-page-desc {
+        max-width: 500px;
+        color: $gray;
+        font-size: 16px;
+        line-height: 24px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .main-page-btns {
+        max-width: 400px;
+        margin-bottom: 100px;
+        a {
+            width: 285px;
+        }
+        @include media-breakpoint-down(sm) {
+            max-width: none;
+            margin-top: 24px !important;
+            margin-bottom: 140px;
+            a {
+                width: 100%;
+            }
+        }
+    }
+}
+*/

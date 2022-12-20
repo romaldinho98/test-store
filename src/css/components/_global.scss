@@ -1,0 +1,82 @@
+html,
+body {
+    overflow-x: hidden;
+    &.overflow-hidden-tablet {
+        overflow: hidden !important;
+    }
+}
+
+* {
+    font-family: $font-family-base;
+}
+
+.font-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headings-font-family;
+    font-weight: 400;
+    color: $gray;
+}
+
+#fsb_container {
+    display: none !important;
+}
+
+*:focus-visible {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none !important;
+    box-shadow: none !important;
+    &::-webkit-input-placeholder {
+        opacity: 1 !important;
+    }
+    &::-moz-placeholder {
+        opacity: 1 !important;
+    }
+    &:-ms-input-placeholder {
+        opacity: 1 !important;
+    }
+    &:-moz-placeholder {
+        opacity: 1 !important;
+    }
+}
+
+.over-x {
+    overflow-x: hidden;
+}
+
+.z-index-2 {
+    position: relative;
+    z-index: 2;
+}
+
+#MainContent {
+    margin-top: 109px;
+    @media screen and (max-width: 1439px) {
+        margin-top: 139px;
+    }
+    @include media-breakpoint-down(sm) {
+        margin-top: 139px;
+    }
+    @include media-breakpoint-down(xs) {
+        margin-top: 116px;
+    }
+}
+
+pickup-availability-drawer {
+    z-index: 55 !important;
+}
+
+.simple-translate-system-theme {
+    display: none !important; 
+}

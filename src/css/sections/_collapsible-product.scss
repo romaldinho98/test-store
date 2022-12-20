@@ -1,0 +1,97 @@
+.collapsible-content {
+    @include media-breakpoint-down(sm) {
+        padding-top: 0 !important;
+    }
+    .collapsible-content__wrapper {
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
+            padding-bottom: 75px;
+        }
+    }
+    .collapsible-content-wrapper-narrow {
+        padding: 0 !important;
+        max-width: 100%;
+        .accordion {
+            border: none;
+            margin-bottom: 2px;
+            &:first-of-type {
+                @include media-breakpoint-down(sm) {
+                    margin-top: 0;
+                    summary {
+                        &::before {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+            summary {
+                position: relative;
+                background-color: $white !important;
+                &[aria-expanded="true"] {
+                    margin-bottom: 2px;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    right: 0px;
+                    bottom: -2px;
+                    background: linear-gradient(
+                        90deg,
+                        rgb(82, 193, 209) 0%,
+                        rgb(167, 144, 206) 35%,
+                        rgb(239, 154, 176) 100%
+                    );
+                    z-index: -1;
+                    pointer-events: none;
+                    transition: 0.3s;
+                }
+                h3 {
+                    color: $primary;
+                    text-decoration: none;
+                }
+                svg {
+                    width: 12px;
+                    right: 8px;
+                    path {
+                        fill: $black !important;
+                    }
+                }
+            }
+            &__content {
+                position: relative;
+                padding: 30px 0;
+                margin: 0;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $gray;
+                overflow: visible;
+                background-color: $white;
+                @include media-breakpoint-down(sm) {
+                    font-size: 14px;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0px;
+                    right: 0px;
+                    bottom: -2px;
+                    background: linear-gradient(
+                        90deg,
+                        rgb(82, 193, 209) 0%,
+                        rgb(167, 144, 206) 35%,
+                        rgb(239, 154, 176) 100%
+                    );
+                    z-index: -1;
+                    pointer-events: none;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}

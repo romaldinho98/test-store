@@ -1,0 +1,270 @@
+.text-and-img-blocks__container {
+    @include media-breakpoint-down(md) {
+        padding: 80px 0 !important;
+    }
+    @include media-breakpoint-down(sm) {
+        padding: 100px 15px !important;
+    }
+}
+.text-and-img-blocks {
+    position: relative;
+    &::before {
+        position: absolute;
+        top: -5%;
+        left: -10%;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 600px;
+        height: 600px;
+        background: $pink;
+        filter: blur(400px);
+        will-change: filter;
+        opacity: 0.4;
+        pointer-events: none;
+        @include media-breakpoint-down(md) {
+            content: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        right: -5%;
+        top: -40%;
+        bottom: 0;
+        margin: auto;
+        content: "";
+        display: block;
+        width: 600px;
+        height: 600px;
+        background: $yellow;
+        filter: blur(400px);
+        will-change: filter;
+        opacity: 0.4;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        pointer-events: none;
+        @include media-breakpoint-down(md) {
+            content: none;
+        }
+    }
+    .container {
+        position: relative;
+        z-index: 4;
+    }
+    &__container {
+        max-width: 1050px;
+        margin: auto;
+        padding: 0 15px;
+        position: relative;
+        z-index: 5;
+    }
+    &__bg {
+        display: block !important;
+        position: absolute;
+        top: 685px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        @include media-breakpoint-down(md) {
+            top: 970px;
+        }
+        @include media-breakpoint-down(sm) {
+            top: 875px;
+        }
+        @include media-breakpoint-down(xs) {
+            top: 895px;
+        }
+        &::before {
+            content: "";
+            display: block;
+            background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_-_our_cookies_1440.svg?v=1663233065");
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 140px;
+            z-index: -1;
+            @include media-breakpoint-down(md) {
+                min-height: 70px;
+            }
+            @include media-breakpoint-down(sm) {
+                background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_-_our_cookies_375.svg?v=1663233065");
+                min-height: 90px;
+            }
+            @include media-breakpoint-down(xs) {
+                background-image: url("https://cdn.shopify.com/s/files/1/0266/3864/7340/files/white_wave_-_our_cookies_375.svg?v=1663233065");
+                min-height: 65px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            background: $blissull_blue;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: -2;
+        }
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 80px;
+        color: $primary;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 55px;
+        }
+    }
+    &__item {
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md) {
+            flex-direction: column !important;
+            margin-bottom: 100px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__img {
+        position: relative;
+        min-width: 50%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media-breakpoint-down(md) {
+            min-width: 100%;
+            margin-bottom: 45px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 25px;
+        }
+        @include media-breakpoint-down(xs) {
+            position: relative;
+            padding-bottom: 100%;
+        }
+        img {
+            max-width: 495px;
+            width: 100%;
+            min-height: 495px;
+            border-radius: 50%;
+            border: 5px solid;
+            object-fit: cover;
+            @include media-breakpoint-down(md) {
+                max-width: 415px;
+                min-height: 415px;
+            }
+            @include media-breakpoint-down(xs) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                object-fit: cover;
+                height: 100%;
+                min-height: auto;
+                max-width: 100%;
+            }
+        }
+        video {
+            max-width: 495px;
+            width: 100%;
+            min-height: 495px;
+            max-height: 495px;
+            border-radius: 50%;
+            border: 5px solid;
+            object-fit: cover;
+            @include media-breakpoint-down(md) {
+                max-height: 415px;
+                min-height: 415px;
+                max-width: 415px;
+            }
+            @include media-breakpoint-down(xs) {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                object-fit: cover;
+                height: 100%;
+                min-height: auto;
+                max-height: initial;
+                max-width: 100%;
+            }
+        }
+    }
+    &__desc {
+        width: 50%;
+        margin-left: 135px;
+        p {
+            line-height: 24px;
+            @include media-breakpoint-down(sm) {
+                line-height: 21px;
+            }
+        }
+        @include media-breakpoint-down(md) {
+            margin-left: 0;
+        }
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+        &.right {
+            margin-left: 0;
+            margin-right: 135px;
+            @include media-breakpoint-down(md) {
+                margin-right: 0;
+            }
+            text-align: left;
+        }
+    }
+    &__text {
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+        h3 {
+            color: $primary;
+            margin-bottom: 15px;
+        }
+        p {
+            color: $gray;
+        }
+        a {
+            margin-top: 30px;
+            @include media-breakpoint-down(xs) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.template-index {
+    .text-and-img-blocks {
+        &__bg {
+            @include media-breakpoint-down(sm) {
+                top: 49%;
+            }
+            @include media-breakpoint-down(xs) {
+                top: 47%;
+            }
+            &::after {
+                @include media-breakpoint-down(xs) {
+                    top: 80px;
+                }
+            }
+            &::before {
+                @include media-breakpoint-down(sm) {
+                    min-height: 110px;
+                }
+                @include media-breakpoint-down(xs) {
+                    min-height: 85px;
+                    top: 60px;
+                }
+            }
+        }
+    }
+}

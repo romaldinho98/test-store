@@ -1,0 +1,197 @@
+// ==========================================================================
+// ## SHOPIFY STATIC SECTION: MAIN PAGE
+// ==========================================================================
+.template-page {
+    &.default {
+        .instagram-feed {
+            display: none !important;
+        }
+    }
+}
+.default-page {
+    .breadcrumb {
+        padding: 48px 0 18px;
+        @include media-breakpoint-down(sm) {
+            padding: 25px 0 49px;
+        }
+    }
+    .rte {
+        position: relative;
+        z-index: 5;
+    }
+    .container {
+        padding-bottom: 80px !important;
+        position: relative;
+        @include media-breakpoint-down(sm) {
+            padding: 0 15px 56px !important;
+        }
+        &::before {
+            position: absolute;
+            bottom: 25%;
+            left: -50%;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $pink;
+            filter: blur(400px);
+            will-change: filter;
+            opacity: 0.4;
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                content: "";
+                left: -8%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &::after {
+            position: absolute;
+            right: -50%;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $primary;
+            filter: blur(400px);
+            will-change: filter;
+            opacity: 0.4;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                content: "";
+                right: -15%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    .main-page-text {
+        position: relative;
+        max-width: 1020px;
+        margin: auto;
+        &::before {
+            position: absolute;
+            top: 5%;
+            left: -50%;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $primary;
+            filter: blur(400px);
+            will-change: filter;
+            opacity: 0.4;
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                content: "";
+                left: -8%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+        &::after {
+            position: absolute;
+            right: -50%;
+            top: -8%;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 600px;
+            height: 600px;
+            background: $yellow;
+            filter: blur(400px);
+            will-change: filter;
+            opacity: 0.4;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            pointer-events: none;
+            @include media-breakpoint-down(sm) {
+                content: "";
+                right: -15%;
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    h1 {
+        text-transform: uppercase;
+        color: $primary;
+        text-align: center;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 24px;
+        }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $black;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-family: "Arsenal";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        @include media-breakpoint-down(sm) {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray;
+        margin-bottom: 15px;
+        @include media-breakpoint-down(sm) {
+            font-size: 14px;
+            line-height: 21px;
+            margin-bottom: 12px;
+        }
+    }
+    ul {
+        margin-top: 30px;
+        margin-left: 10px;
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 30px;
+        }
+        li {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $gray;
+            margin-bottom: 30px !important;
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+                line-height: 21px;
+                margin-bottom: 12px !important;
+            }
+            &::marker {
+                color: $primary;
+            }
+        }
+    }
+
+    strong {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 25px;
+        color: $black;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
+    }
+    .simple-translate-system-theme {
+        display: none !important; 
+    }
+}
