@@ -1,16 +1,23 @@
-.text-64px {
-  @include text-40px;
+.text-56px {
+  @include text-48px;
 
   @include media-breakpoint-up(sm) {
-    @include text-64px;
+    @include text-56px;
+  }
+}
+.text-52px {
+  @include text-32px;
+
+  @include media-breakpoint-up(sm) {
+    @include text-52px;
   }
 }
 
-.text-48px {
-  @include text-40px;
+.text-44px {
+  @include text-44px;
 
   @include media-breakpoint-up(sm) {
-    @include text-48px;
+    @include text-26px;
   }
 }
 .text-40px-all {
@@ -24,21 +31,12 @@
   }
 }
 .text-32px {
-  @include text-26px;
+  @include text-24px;
 
   @include media-breakpoint-up(sm) {
     @include text-32px;
   }
 }
-
-.text-24px {
-  @include text-20px;
-
-  @include media-breakpoint-up(sm) {
-    @include text-24px;
-  }
-}
-
 .text-32px-all {
   @include text-32px;
 }
@@ -120,11 +118,16 @@
 .text-text {
   color: $text;
 }
-.text-pink {
-  color: $pink;
-}
-.text-black {
-  color: $black;
+
+.font-header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  color: $gray;
 }
 
 h2 {
