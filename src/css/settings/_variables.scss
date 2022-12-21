@@ -1,9 +1,9 @@
 // --------------------------------------------------
 // Type
 
-// $font-family-base: "Silka", sans-serif !important;
+$font-family-base: "Montserrat", sans-serif !important;
 
-// $headings-font-family: "Cormorant Infant", sans-serif !important;
+$headings-font-family: "Nunito Sans", sans-serif !important;
 
 // --------------------------------------------------
 // Colors
@@ -37,8 +37,8 @@ $grid-breakpoints: (
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 1024px,
-  xl: 1342px,
+  lg: 992px,
+  xl: 1230px,
 );
 
 

@@ -1,0 +1,72 @@
+<div class="faq container">
+  <h2 class="faq__title">{{ section.settings.faq_title }}</h2>
+  <div class="faq__content">
+    <div class="faq__image">
+      <img src="{{ section.settings.faq_image | img_url: 'master' }}" alt="{{ section.settings.faq_image.alt | default: "bottle" }}">
+    </div>
+    <ul class="faq__accordion accordion">
+      {%- for block in section.blocks -%}
+        <li class="accordion__item">
+          <div class="accordion__question">
+            <h3 class="">{{ block.settings.faq_question }}</h3>
+            <div class="accordion__plus">
+              {% render 'icon-plus' %}
+            </div>
+          </div>
+          <div class="accordion__answer">
+            <div class="accordion__answer-wrapper">
+              {{ block.settings.faq_answer }}
+            </div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "settings": [
+      {
+        "type": "text",
+        "id": "faq_title",
+        "label": "FAQ Title",
+        "default": "Frequently Asked Questions"
+      }, {
+        "type": "image_picker",
+        "id": "faq_image",
+        "label": "FAQ image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "faq_question",
+            "label": "Question",
+            "default": "What is inside the GOpure Pod?"
+          }, {
+            "id": "icon_plus",
+            "type": "html",
+            "label": "Add SVG icon plus",
+            "info": "Right click on SVG file. Open with any text editor and copy all code. Paste code in above box. Contact us if you face issue."
+          }, {
+            "type": "richtext",
+            "id": "faq_answer",
+            "label": "Answer",
+            "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ"
+      }
+    ]
+  }
+{% endschema %}
