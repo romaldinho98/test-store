@@ -1,58 +1,59 @@
 <div class="container contact-us__content">
   <div class="contact-us__map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16232.767331288289!2d24.757717318633443!3d59.4314748270581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929360020f9083%3A0x1de997ee15534f1d!2zUsOkdmFsYSBwc3QgOCwgMTAxNDUgVGFsbGlubiwg0K3RgdGC0L7QvdC40Y8!5e0!3m2!1sru!2sua!4v1672046157804!5m2!1sru!2sua" width="460" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16232.767331288289!2d24.757717318633443!3d59.4314748270581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929360020f9083%3A0x1de997ee15534f1d!2zUsOkdmFsYSBwc3QgOCwgMTAxNDUgVGFsbGlubiwg0K3RgdGC0L7QvdC40Y8!5e0!3m2!1sru!2sua!4v1672046157804!5m2!1sru!2sua" width="600" height="620" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
   <div class="contact-us__info">
     <h2 class="contact-us__title"> {{ section.settings.title }}</h2>
     <div class="contact-us__subtitle"> {{ section.settings.subtitle }}</div>
     <div class="contact-us__icons-info">
       <div>
-        {% render 'snippet' %}
+        {% render 'icon-round' %}
         <span>{{ section.settings.icon-info-1 }}</span>
       </div>
       <div>
-        {% render 'snippet' %}
+        {% render 'icon-round' %}
         <span>{{ section.settings.icon-info-2 }}</span>
       </div>
       <div>
-        {% render 'snippet' %}
+        {% render 'icon-round' %}
         <span>{{ section.settings.icon-info-3 }}</span>
       </div>
     </div>
     <div class="contact-us__icons-social">
-      <div>
-        {% render 'snippet' %}
-        <span>{{ section.settings.icon-social-1 }}</span>
-      </div>
-      <div>
-        {% render 'snippet' %}
-        <span>{{ section.settings.icon-social-2 }}</span>
-      </div>
-      <div>
-        {% render 'snippet' %}
-        <span>{{ section.settings.icon-social-3 }}</span>
-      </div>
-      <div>
-        {% render 'snippet' %}
-        <span>{{ section.settings.icon-social-4 }}</span>
-      </div>
+      <a href="{{ section.settings.messenger }}">
+        {% render 'icon-new-messenger' %}
+        <span>Messenger</span>
+      </a>
+      <a href="{{ section.settings.telegram }}">
+        {% render 'icon-new-telegram' %}
+        <span>Telegram</span>
+      </a>
+      <a href="{{ section.settings.instagram }}">
+        {% render 'icon-new-instagram' %}
+        <span>Instagram</span>
+      </a>
+      <a href="{{ section.settings.facebook }}">
+        {% render 'icon-new-facebook' %}
+        <span>Facebook</span>
+      </a>
     </div>
     <div class="contact-us__question-block question-block">
       <div class="question-block__title">{{ section.settings.question_block_title }}</div>
-      <div class="question-block__subtitle">{{ section.settings.question_block_subtitle }}</div></div>
+      <div class="question-block__subtitle">{{ section.settings.question_block_subtitle }}</div>
       <div class="question-block__links">
-        <div>
-          <span>{{ section.settings.question_block_link-1 }}</span>
-          {% render 'snippet' %}
-        </div>
-        <div>
-          <span>{{ section.settings.question_block_link-2 }}</span>
-          {% render 'snippet' %}
-        </div>
-        <div>
-          <span>{{ section.settings.question_block_link-3 }}</span>
-          {% render 'snippet' %}
-        </div>
+        <a href="{{ section.settings.btn_link_1 }}">
+          <span>{{ section.settings.btn_title_1 }}</span>
+          {% render 'icon-go-to' %}
+        </a>
+        <a href="{{ section.settings.btn_link_2 }}">
+          <span>{{ section.settings.btn_title_2 }}</span>
+          {% render 'icon-go-to' %}
+        </a>
+        <a href="{{ section.settings.btn_link_3 }}"> 
+          <span>{{ section.settings.btn_title_3 }}</span>
+          {% render 'icon-go-to' %}
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -77,17 +78,17 @@
       "content": "Info icons block"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "icon-info-1",
-      "label": "Adress"
+      "label": "Address"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "icon-info-2",
       "label": "Email"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "icon-info-3",
       "label": "Working Hours"
     },
@@ -96,24 +97,72 @@
       "content": "Social icons block"
     },
     {
-      "type": "richtext",
-      "id": "icon-social-1",
+      "type": "url",
+      "id": "messenger",
       "label": "Messenger"
     },
     {
-      "type": "richtext",
-      "id": "icon-social-2",
+      "type": "url",
+      "id": "telegram",
       "label": "Telegram"
     },
     {
-      "type": "richtext",
-      "id": "icon-social-3",
+      "type": "url",
+      "id": "instagram",
       "label": "Instagram"
     },
     {
-      "type": "richtext",
-      "id": "icon-social-4",
+      "type": "url",
+      "id": "facebook",
       "label": "Facebook"
+    },
+    {
+      "type": "header",
+      "content": "Questions block"
+    },
+    {
+      "type": "text",
+      "id": "question_block_title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "question_block_subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "header",
+      "content": "Questions block buttons"
+    },
+    {
+      "type": "text",
+      "id": "btn_title_1",
+      "label": "Title button 1"
+    },
+    {
+      "type": "url",
+      "id": "btn_link_1",
+      "label": "Link button 1"
+    },
+    {
+      "type": "text",
+      "id": "btn_title_2",
+      "label": "Title button 2"
+    },
+    {
+      "type": "url",
+      "id": "btn_link_2",
+      "label": "Link button 2"
+    },
+    {
+      "type": "text",
+      "id": "btn_title_3",
+      "label": "Title button 3"
+    },
+    {
+      "type": "url",
+      "id": "btn_link_3",
+      "label": "Link button 3"
     }
   ],
   "presets": [
