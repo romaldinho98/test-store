@@ -113,11 +113,26 @@
       "settings": {
         "faq_title": "Frequently Asked Questions"
       }
+    },
+    "57687a79-c409-4f2e-8f35-43abc8408d7f": {
+      "type": "contact-us",
+      "settings": {
+        "title": "Contact us",
+        "subtitle": "<p>Do not hesitate to get in touch with us. Our customer support team will get back to you as soon as possible. For urgent matters, please contact us on Instagram or Telegram.<\/p>",
+        "icon-info-1": "<p>Ravala pst. 8, Tallinn, Estonia 10143<\/p>",
+        "icon-info-2": "<p>info@adsellr.com<\/p>",
+        "icon-info-3": "<p>Mon - Fri, 9 AM - 5 PM, UTC +3.<\/p>",
+        "icon-social-1": "",
+        "icon-social-2": "",
+        "icon-social-3": "",
+        "icon-social-4": ""
+      }
     }
   },
   "order": [
     "rich_text",
     "featured_collection",
-    "d3a0d9c7-f1ce-4fff-a43c-75bbeb0dc9ad"
+    "d3a0d9c7-f1ce-4fff-a43c-75bbeb0dc9ad",
+    "57687a79-c409-4f2e-8f35-43abc8408d7f"
   ]
 }
