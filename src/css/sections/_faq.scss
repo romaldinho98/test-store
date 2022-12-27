@@ -1,4 +1,5 @@
 .faq {
+  padding-top: 48px;
   padding-bottom: 48px;
   &__title {
     font-family: $headings-font-family;
@@ -31,6 +32,9 @@
     }
   }
   &__accordion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     max-width: 547px;
     flex: 1 0 auto;
     padding: 0;

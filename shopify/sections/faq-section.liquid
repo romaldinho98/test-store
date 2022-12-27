@@ -1,9 +1,11 @@
 <div class="faq container">
   <h2 class="faq__title">{{ section.settings.faq_title }}</h2>
   <div class="faq__content">
-    <div class="faq__image">
-      <img src="{{ section.settings.faq_image | img_url: 'master' }}" alt="{{ section.settings.faq_image.alt | default: "bottle" }}">
-    </div>
+    {% if section.settings.faq_image != blank %}
+      <div class="faq__image">
+        <img src="{{ section.settings.faq_image | img_url: 'master' }}" alt="{{ section.settings.faq_image.alt | default: "bottle" }}">
+      </div>
+    {% endif %}
     <ul class="faq__accordion accordion">
       {%- for block in section.blocks -%}
         <li class="accordion__item">

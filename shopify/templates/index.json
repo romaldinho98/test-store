@@ -101,6 +101,22 @@
             "icon_plus": "",
             "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
           }
+        },
+        "a3945113-b30c-4fcc-8386-c6e8117e2507": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "a5272e6b-ae58-4c10-93b5-d76584548e10": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -108,10 +124,13 @@
         "f35d7ed7-744e-4349-9d25-b3877e979903",
         "804655b3-25e4-414c-9d5d-3aca2a9b3968",
         "842668d0-c43e-4e21-b5d0-632deca919a4",
-        "051668d1-4464-436b-af8d-7deaaf28542f"
+        "051668d1-4464-436b-af8d-7deaaf28542f",
+        "a3945113-b30c-4fcc-8386-c6e8117e2507",
+        "a5272e6b-ae58-4c10-93b5-d76584548e10"
       ],
       "settings": {
-        "faq_title": "Frequently Asked Questions"
+        "faq_title": "Frequently Asked Questions",
+        "faq_image": "shopify:\/\/shop_images\/gopure-pod-water-filter-front-package_1200x1200_1.png"
       }
     },
     "57687a79-c409-4f2e-8f35-43abc8408d7f": {
