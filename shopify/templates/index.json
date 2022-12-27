@@ -154,12 +154,38 @@
         "btn_title_3": "Custom order enquiry",
         "btn_link_3": "#"
       }
+    },
+    "407131e1-457d-4a41-9aa2-9fb6c6e490a1": {
+      "type": "versus",
+      "blocks": {
+        "f32f0e7c-7586-46ba-8d85-81361a343fda": {
+          "type": "left_arguments",
+          "settings": {
+            "left_argument": "Argument"
+          }
+        },
+        "46f6ae8d-d907-439a-b5f8-6efc8986a580": {
+          "type": "right_arguments",
+          "settings": {
+            "right_argument": "Argument"
+          }
+        }
+      },
+      "block_order": [
+        "f32f0e7c-7586-46ba-8d85-81361a343fda",
+        "46f6ae8d-d907-439a-b5f8-6efc8986a580"
+      ],
+      "settings": {
+        "title": "curaly vs. la concurrence",
+        "text-content": "<p>Nous sommes convaincus que les gummies Curaly disposent de la meilleure qualité sur le marché.<\/p>"
+      }
     }
   },
   "order": [
     "rich_text",
     "featured_collection",
     "d3a0d9c7-f1ce-4fff-a43c-75bbeb0dc9ad",
-    "57687a79-c409-4f2e-8f35-43abc8408d7f"
+    "57687a79-c409-4f2e-8f35-43abc8408d7f",
+    "407131e1-457d-4a41-9aa2-9fb6c6e490a1"
   ]
 }

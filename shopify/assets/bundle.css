@@ -5496,6 +5496,11 @@ h3 {
   margin-bottom: 16px;
 }
 
+.footer-block__details-content li a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
 .footer-block__details-content li:last-child {
   margin-bottom: 0;
 }

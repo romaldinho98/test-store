@@ -1,0 +1,99 @@
+<div class="versus container">
+  <h2 class="versus__title">{{ section.settings.title }}</h2>
+  <h4 class="versus__text-content">{{ section.settings.text-content }}</h4>
+  <div class="versus__cards">
+    <div class="versus__card">
+      {% if section.settings.left_image != blank %}
+        <div class="versus__image">
+          <img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ section.settings.left_image.alt | default: "bottle" }}">
+        </div>
+      {% endif %}
+      <ul>
+        {%- for block in section.blocks -%}
+          <li class="accordion__item">
+            <span>{{ block.settings.left_argument }}</span>
+            <div class="">
+              {% render 'icon-checkmark-green' %}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="versus__card">
+      {% if section.settings.right_image != blank %}
+        <div class="versus__image">
+          <img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ section.settings.right_image.alt | default: "bottle" }}">
+        </div>
+      {% endif %}
+      <ul>
+        {%- for block in section.blocks -%}
+          <li class="accordion__item">
+            <span>{{ block.settings.right_argument }}</span>
+            <div class="">
+              {% render 'icon-cross' %}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Versus",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "text-content",
+        "label": "Text content"
+      },
+      {
+        "type": "image_picker",
+        "id": "left_image",
+        "label": "Left image"
+      },
+      {
+        "type": "image_picker",
+        "id": "right_image",
+        "label": "Right image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "left_arguments",
+        "name": "Left Arguments",
+        "settings": [
+          {
+            "type": "text",
+            "id": "left_argument",
+            "label": "Argument",
+            "default": "Argument"
+          }
+        ]
+      },
+      {
+        "type": "right_arguments",
+        "name": "Right Arguments",
+        "settings": [
+          {
+            "type": "text",
+            "id": "right_argument",
+            "label": "Argument",
+            "default": "Argument"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Versus Section"
+      }
+    ]
+  }
+{% endschema %}

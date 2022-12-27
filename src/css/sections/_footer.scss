@@ -41,6 +41,10 @@
 
 .footer-block__details-content li {
   margin-bottom: 16px;
+  a {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
 }
 
 .footer-block__details-content li:last-child {
