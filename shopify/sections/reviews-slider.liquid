@@ -1,59 +1,55 @@
-{%- render 'section-spacing-collapsing' -%}
-
-<div {% render 'section-properties' %}>
-  <div class="section-stack section-{{ section.id }} reviews-section__container">
-    <div class="reviews-section__heading-wrapper">
-      <div class="reviews-section__pill-shape">
-        <h4>{{ section.settings.pill_shape }}</h4> 
-      </div>
-      <h2 class="reviews-section__title h3">{{ section.settings.title }}</h2>
+<div class="section-{{ section.id }} reviews-section__container">
+  <div class="reviews-section__heading-wrapper">
+    <div class="reviews-section__pill-shape">
+      <h4>{{ section.settings.pill_shape }}</h4> 
     </div>
-    <div class="reviews-section__container reviews-section__slider-wrapper">
-      <div class="swiper reviews-section__slider" style="opacity: 0">
-        <div class="swiper-wrapper">
-          {% for block in section.blocks %}
-            <div class="swiper-slide reviews-section__slide">
-              {%- if block.settings.image != blank -%}
-                {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 470px) 40px, 56px', class: 'reviews-section__slide-image' -}}
-              {%- endif -%}
-              <div class="reviews-section__slide-text-info">
-                <div class="reviews-section__review-author">
-                  {%- if block.settings.show_rating -%}
-                    <div class="rating">
-                      <div class="rating__stars" role="img" aria-label="{{ 'general.rating.info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
-                        {%- for i in (1..5) -%}
-                          {%- if i <= block.settings.rating -%}
-                            {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--full' -%}
-                          {%- else -%}
-                            {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--empty' -%}
-                          {%- endif -%}
-                        {%- endfor -%}
-                      </div>
+    <h2 class="reviews-section__title h3">{{ section.settings.title }}</h2>
+  </div>
+  <div class="reviews-section__container reviews-section__slider-wrapper">
+    <div class="swiper reviews-section__slider" style="opacity: 0">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          <div class="swiper-slide reviews-section__slide">
+            {%- if block.settings.image != blank -%}
+              {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 470px) 40px, 56px', class: 'reviews-section__slide-image' -}}
+            {%- endif -%}
+            <div class="reviews-section__slide-text-info">
+              <div class="reviews-section__review-author">
+                {%- if block.settings.show_rating -%}
+                  <div class="rating">
+                    <div class="rating__stars" role="img" aria-label="{{ 'general.rating.info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
+                      {%- for i in (1..5) -%}
+                        {%- if i <= block.settings.rating -%}
+                          {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--full' -%}
+                        {%- else -%}
+                          {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--empty' -%}
+                        {%- endif -%}
+                      {%- endfor -%}
                     </div>
-                  {%- endif -%}
-                  {%- if block.settings.author != blank -%}
-                    <span class="reviews-section__review-author-name">{{ block.settings.author }}</span>
-                  {%- endif -%}
-                </div> 
-                {%- if block.settings.content != blank -%}
-                  <div class="reviews-section__text-review">
-                    {{- block.settings.content -}}
                   </div>
                 {%- endif -%}
-                {%- if block.settings.verified_label != blank -%}
-                  <div class="reviews-section__verified">
-                    {% render 'icon-checkmark' %}
-                    <span>{{ block.settings.verified_label }}</span>
-                  </div>
+                {%- if block.settings.author != blank -%}
+                  <span class="reviews-section__review-author-name">{{ block.settings.author }}</span>
                 {%- endif -%}
-              </div>  
-            </div>
-          {% endfor %}
-        </div>
+              </div> 
+              {%- if block.settings.content != blank -%}
+                <div class="reviews-section__text-review">
+                  {{- block.settings.content -}}
+                </div>
+              {%- endif -%}
+              {%- if block.settings.verified_label != blank -%}
+                <div class="reviews-section__verified">
+                  {% render 'icon-checkmark' %}
+                  <span>{{ block.settings.verified_label }}</span>
+                </div>
+              {%- endif -%}
+            </div>  
+          </div>
+        {% endfor %}
       </div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </div>
 </div> 
 
