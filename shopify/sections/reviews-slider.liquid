@@ -1,0 +1,220 @@
+{%- render 'section-spacing-collapsing' -%}
+
+<div {% render 'section-properties' %}>
+  <div class="section-stack section-{{ section.id }} reviews-section__container">
+    <div class="reviews-section__heading-wrapper">
+      <div class="reviews-section__pill-shape">
+        <h4>{{ section.settings.pill_shape }}</h4> 
+      </div>
+      <h2 class="reviews-section__title h3">{{ section.settings.title }}</h2>
+    </div>
+    <div class="reviews-section__container reviews-section__slider-wrapper">
+      <div class="swiper reviews-section__slider" style="opacity: 0">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            <div class="swiper-slide reviews-section__slide">
+              {%- if block.settings.image != blank -%}
+                {{- block.settings.image | image_url: width: block.settings.image.width | image_tag: loading: 'lazy', sizes: '(max-width: 470px) 40px, 56px', class: 'reviews-section__slide-image' -}}
+              {%- endif -%}
+              <div class="reviews-section__slide-text-info">
+                <div class="reviews-section__review-author">
+                  {%- if block.settings.show_rating -%}
+                    <div class="rating">
+                      <div class="rating__stars" role="img" aria-label="{{ 'general.rating.info' | t: rating_value: block.settings.rating, rating_max: 5 }}">
+                        {%- for i in (1..5) -%}
+                          {%- if i <= block.settings.rating -%}
+                            {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--full' -%}
+                          {%- else -%}
+                            {%- render 'icon' with 'rating-star', class: 'rating__star rating__star--empty' -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  {%- endif -%}
+                  {%- if block.settings.author != blank -%}
+                    <span class="reviews-section__review-author-name">{{ block.settings.author }}</span>
+                  {%- endif -%}
+                </div> 
+                {%- if block.settings.content != blank -%}
+                  <div class="reviews-section__text-review">
+                    {{- block.settings.content -}}
+                  </div>
+                {%- endif -%}
+                {%- if block.settings.verified_label != blank -%}
+                  <div class="reviews-section__verified">
+                    {% render 'icon-checkmark' %}
+                    <span>{{ block.settings.verified_label }}</span>
+                  </div>
+                {%- endif -%}
+              </div>  
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</div> 
+
+<script>
+    new Swiper('.section-{{ section.id }} .reviews-section__slider', {
+      slidesPerView: 3,
+      spaceBetween: 56,
+      navigation: {
+        nextEl: ".reviews-section__slider-wrapper .swiper-button-next",
+        prevEl: ".reviews-section__slider-wrapper .swiper-button-prev",
+      },
+      keyboard: {
+        enabled: true,
+      },
+      mousewheel: {
+        forceToAxis: true,
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1700: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+      on: {
+        init: function () {
+            document.querySelector('.section-{{ section.id }} .reviews-section__slider').style.opacity = 1;
+        }
+      },
+    });
+
+    {%- if request.design_mode -%}
+        /* This re-initialization is necessary, otherwise when the user changes some settings in the Shopify template editor
+        *  the Swiper carousel disappears. */
+      setInterval(()=>
+      {
+      new Swiper('.section-{{ section.id }} .reviews-section__slider ', {
+        slidesPerView: 3,
+        spaceBetween: 56,
+        navigation: {
+          nextEl: ".reviews-section__slider-wrapper .swiper-button-next",
+          prevEl: ".reviews-section__slider-wrapper .swiper-button-prev",
+        },
+        keyboard: {
+          enabled: true,
+        },
+        mousewheel: {
+          forceToAxis: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          1700: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+        on: {
+            init: function () {
+                document.querySelector('.section-{{ section.id }} .reviews-section__slider').style.opacity = 1;
+            }
+        },
+      });
+      }, 2000);
+    {%- endif -%}
+</script>
+
+{% schema %}
+{
+  "name": "Reviews section",
+  "class": "reviews-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "pill_shape",
+      "label": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Colors",
+      "info": "Gradient replaces solid colors when set."
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "Heading gradient color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo",
+          "info": "470 x 470px .jpg recommended"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "label": "Show rating",
+          "default": true
+        },
+        {
+          "type": "range",
+          "min": 0,
+          "max": 5,
+          "id": "rating",
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "text",
+          "id": "verified_label",
+          "label": "Verified",
+          "default": "Acheteur vérifié"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews Section Slider"
+    }
+  ]
+}
+{% endschema %}
