@@ -1,40 +1,75 @@
-<div class="versus container">
-  <h2 class="versus__title">{{ section.settings.title }}</h2>
-  <h4 class="versus__text-content">{{ section.settings.text-content }}</h4>
-  <div class="versus__cards">
-    <div class="versus__card">
-      {% if section.settings.left_image != blank %}
-        <div class="versus__image">
-          <img src="{{ section.settings.left_image | img_url: 'master' }}" alt="{{ section.settings.left_image.alt | default: "bottle" }}">
+<div class="versus">
+  <div class="versus__content container">
+    <h2 class="versus__title">{{ section.settings.title }}</h2>
+    <h4 class="versus__text-content">{{ section.settings.text-content }}</h4>
+    <div class="versus__cards">
+      {%- for block in section.blocks -%}
+        <div class="versus__card {% if forloop.index == 1 %} versus__card--green  {% endif %} {% if forloop.index == 2 %} versus__card--red  {% endif %}">
+          {% if block.settings.image != blank %}
+            <div class="versus__card-image">
+              <img src="{{ block.settings.image | img_url: 'master' }}" 
+              alt="{{ block.settings.image.alt | default: "bottle" }}">
+            </div>
+          {% endif %}
+          <ul class="versus__argument-items"> 
+            {% if block.settings.argument_1 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_1 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_2 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_2 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_3 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_3 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_4 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_4 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_5 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_5 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_6 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_6 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_7 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_7 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_8 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_8 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_9 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_9 }}</span>
+              </li>
+            {% endif %} 
+            {% if block.settings.argument_10 != blank %}
+              <li class="versus__argument-item">
+                <span>{{ block.settings.argument_10 }}</span>
+              </li>
+            {% endif %} 
+          </ul>
+        </div>
+      {%- endfor -%}
+      {% if section.settings.show_vs-lavel %}
+        <div class="versus__vs-label">
+          {% render 'vs-label' %}
         </div>
       {% endif %}
-      <ul>
-        {%- for block in section.blocks -%}
-          <li class="accordion__item">
-            <span>{{ block.settings.left_argument }}</span>
-            <div class="">
-              {% render 'icon-checkmark-green' %}
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-    </div>
-    <div class="versus__card">
-      {% if section.settings.right_image != blank %}
-        <div class="versus__image">
-          <img src="{{ section.settings.right_image | img_url: 'master' }}" alt="{{ section.settings.right_image.alt | default: "bottle" }}">
-        </div>
-      {% endif %}
-      <ul>
-        {%- for block in section.blocks -%}
-          <li class="accordion__item">
-            <span>{{ block.settings.right_argument }}</span>
-            <div class="">
-              {% render 'icon-cross' %}
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
     </div>
   </div>
 </div>
@@ -42,6 +77,7 @@
 {% schema %}
   {
     "name": "Versus",
+    "max_blocks": 2,
     "settings": [
       {
         "type": "text",
@@ -54,45 +90,96 @@
         "label": "Text content"
       },
       {
-        "type": "image_picker",
-        "id": "left_image",
-        "label": "Left image"
-      },
-      {
-        "type": "image_picker",
-        "id": "right_image",
-        "label": "Right image"
+        "type": "checkbox",
+        "id": "show_vs-lavel",
+        "label": "Show VS Label",
+        "default": true
       }
     ],
     "blocks": [
       {
-        "type": "left_arguments",
-        "name": "Left Arguments",
+        "type": "card",
+        "name": "Arguments Cards",
         "settings": [
           {
-            "type": "text",
-            "id": "left_argument",
-            "label": "Argument",
-            "default": "Argument"
-          }
-        ]
-      },
-      {
-        "type": "right_arguments",
-        "name": "Right Arguments",
-        "settings": [
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
           {
             "type": "text",
-            "id": "right_argument",
-            "label": "Argument",
-            "default": "Argument"
+            "id": "argument_1",
+            "label": "Argument 1"
+          },
+          {
+            "type": "text",
+            "id": "argument_2",
+            "label": "Argument 2"
+          },
+          {
+            "type": "text",
+            "id": "argument_3",
+            "label": "Argument 3"
+          },
+          {
+            "type": "text",
+            "id": "argument_4",
+            "label": "Argument 4"
+          },
+          {
+            "type": "text",
+            "id": "argument_5",
+            "label": "Argument 5"
+          },
+          {
+            "type": "text",
+            "id": "argument_6",
+            "label": "Argument 6"
+          },
+          {
+            "type": "text",
+            "id": "argument_7",
+            "label": "Argument 7"
+          },
+          {
+            "type": "text",
+            "id": "argument_8",
+            "label": "Argument 8"
+          },
+          {
+            "type": "text",
+            "id": "argument_9",
+            "label": "Argument 9"
+          },
+          {
+            "type": "text",
+            "id": "argument_10",
+            "label": "Argument 10"
           }
         ]
       }
     ],
     "presets": [
       {
-        "name": "Versus Section"
+        "name": "Versus Section",
+        "blocks": [
+          {
+            "type": "card",
+            "settings": {
+              "argument_1": "Argument 1",
+              "argument_2": "Argument 2",
+              "argument_3": "Argument 3"
+            }
+          }, 
+          {
+            "type": "card",
+            "settings": {
+              "argument_1": "Argument 1",
+              "argument_2": "Argument 2",
+              "argument_3": "Argument 3"
+            }
+          }
+        ]
       }
     ]
   }

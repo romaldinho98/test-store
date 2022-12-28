@@ -155,25 +155,45 @@
         "btn_link_3": "#"
       }
     },
-    "407131e1-457d-4a41-9aa2-9fb6c6e490a1": {
+    "f44cfb45-76cd-4508-a556-c09933ab4991": {
       "type": "versus",
       "blocks": {
-        "f32f0e7c-7586-46ba-8d85-81361a343fda": {
-          "type": "left_arguments",
+        "template--14760092106830__f44cfb45-76cd-4508-a556-c09933ab4991-16722189567ef0faa9-1": {
+          "type": "card",
           "settings": {
-            "left_argument": "Argument"
+            "image": "shopify:\/\/shop_images\/gummies-us-vs_1_9d80f053-dab7-408d-9ec7-892bf593e06d.png",
+            "argument_1": "Argument 1",
+            "argument_2": "Argument 2",
+            "argument_3": "Argument 3",
+            "argument_4": "Argument 4",
+            "argument_5": "Argument 5",
+            "argument_6": "Argument 6",
+            "argument_7": "",
+            "argument_8": "",
+            "argument_9": "",
+            "argument_10": ""
           }
         },
-        "46f6ae8d-d907-439a-b5f8-6efc8986a580": {
-          "type": "right_arguments",
+        "template--14760092106830__f44cfb45-76cd-4508-a556-c09933ab4991-16722189567ef0faa9-0": {
+          "type": "card",
           "settings": {
-            "right_argument": "Argument"
+            "image": "shopify:\/\/shop_images\/other_gummies_vs_section_1.png",
+            "argument_1": "Argument 1",
+            "argument_2": "Argument 2",
+            "argument_3": "Argument 3",
+            "argument_4": "Argument 4",
+            "argument_5": "Argument 5",
+            "argument_6": "Argument 6",
+            "argument_7": "",
+            "argument_8": "",
+            "argument_9": "",
+            "argument_10": ""
           }
         }
       },
       "block_order": [
-        "f32f0e7c-7586-46ba-8d85-81361a343fda",
-        "46f6ae8d-d907-439a-b5f8-6efc8986a580"
+        "template--14760092106830__f44cfb45-76cd-4508-a556-c09933ab4991-16722189567ef0faa9-1",
+        "template--14760092106830__f44cfb45-76cd-4508-a556-c09933ab4991-16722189567ef0faa9-0"
       ],
       "settings": {
         "title": "curaly vs. la concurrence",
@@ -186,6 +206,6 @@
     "featured_collection",
     "d3a0d9c7-f1ce-4fff-a43c-75bbeb0dc9ad",
     "57687a79-c409-4f2e-8f35-43abc8408d7f",
-    "407131e1-457d-4a41-9aa2-9fb6c6e490a1"
+    "f44cfb45-76cd-4508-a556-c09933ab4991"
   ]
 }

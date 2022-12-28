@@ -5875,3 +5875,216 @@ h3 {
   align-items: center;
   gap: 12px;
 }
+
+.versus {
+  background: #F5F5F5;
+  padding-top: 42px;
+  padding-bottom: 80px;
+}
+
+.versus__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 85px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+.versus__text-content {
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 36px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__text-content {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 15px;
+  }
+}
+
+.versus__cards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__cards {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .versus__cards {
+    gap: 15px;
+  }
+}
+
+.versus__card {
+  border-radius: 25px;
+}
+
+.versus__card--green {
+  background: rgba(64, 201, 102, 0.1);
+}
+
+.versus__card--green .versus__card-image {
+  filter: drop-shadow(5px 5px 20px rgba(64, 201, 102, 0.25));
+}
+
+.versus__card--green .versus__argument-item {
+  text-align: right;
+}
+
+.versus__card--green .versus__argument-item span {
+  display: block;
+  margin-right: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__card--green .versus__argument-item span {
+    margin-right: 20px;
+  }
+}
+
+.versus__card--green .versus__argument-item:after {
+  content: "";
+  background-size: contain;
+  background-image: url("https://cdn.shopify.com/s/files/1/0555/5181/9854/files/check_mark_v2.svg?v=1672223711");
+  position: absolute;
+  right: 0;
+  top: 15px;
+  width: 28px;
+  height: 28px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__card--green .versus__argument-item:after {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+  }
+}
+
+.versus__card--red {
+  background: rgba(247, 113, 125, 0.1);
+}
+
+.versus__card--red .versus__card-image {
+  filter: drop-shadow(5px 5px 20px rgba(247, 113, 125, 0.25));
+}
+
+.versus__card--red .versus__argument-item span {
+  display: block;
+  margin-left: 40px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__card--red .versus__argument-item span {
+    margin-left: 20px;
+  }
+}
+
+.versus__card--red .versus__argument-item:after {
+  content: "";
+  background-size: contain;
+  background-image: url("https://cdn.shopify.com/s/files/1/0555/5181/9854/files/icon-cross.svg?v=1672221902");
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__card--red .versus__argument-item:after {
+    width: 12px;
+    height: 12px;
+    top: 2px;
+  }
+}
+
+.versus__card-image {
+  width: 100%;
+  max-width: 352px;
+  max-height: 352px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 4px solid #F5F5F5;
+}
+
+@media (max-width: 1053.98px) {
+  .versus__card-image {
+    max-height: 305px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .versus__card-image {
+    max-height: 235px;
+    height: 235px;
+  }
+}
+
+.versus__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.versus__argument-items {
+  padding: 30px 20px 30px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__argument-items {
+    padding: 15px 7px 15px;
+  }
+}
+
+.versus__argument-item {
+  position: relative;
+}
+
+.versus__argument-item span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__argument-item span {
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 12px;
+  }
+}
+
+.versus__vs-label {
+  position: absolute;
+  top: 120px;
+}
+
+@media (max-width: 767.98px) {
+  .versus__vs-label {
+    top: 60px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .versus__vs-label svg {
+    width: 75px;
+    height: 75px;
+  }
+}
