@@ -6090,6 +6090,7 @@ h3 {
 }
 
 .reviews-section {
+  padding: 80px 80px 180px;
   background-color: rgba(250, 241, 219, 0.5) !important;
   position: relative;
   background-image: url("https://cdn.shopify.com/s/files/1/0510/6846/9429/files/wave.svg?v=1670425424") !important;
@@ -6101,20 +6102,6 @@ h3 {
 @media (max-width: 1053.98px) {
   .reviews-section {
     background-image: url("https://cdn.shopify.com/s/files/1/0510/6846/9429/files/wave_mob.svg?v=1670488755") !important;
-  }
-}
-
-.reviews-section .section-stack {
-  gap: 0;
-}
-
-.reviews-section .section {
-  background: none !important;
-  padding: 80px 80px 180px;
-}
-
-@media (max-width: 1053.98px) {
-  .reviews-section .section {
     padding: 30px 15px 78px 15px;
   }
 }

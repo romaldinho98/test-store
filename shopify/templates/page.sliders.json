@@ -42,18 +42,30 @@
             "content": "<p>dfngngn<\/p>",
             "verified_label": "Acheteur vérifié"
           }
+        },
+        "936a1321-34a2-4f9c-aea4-b413d5129b26": {
+          "type": "review",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_48.png",
+            "show_rating": true,
+            "rating": 5,
+            "author": "erwerhge",
+            "content": "<p>wrgrhre<\/p>",
+            "verified_label": "Acheteur vérifié"
+          }
         }
       },
       "block_order": [
         "447b7dff-8f37-41db-8d91-305dc07d420b",
         "dd6c147b-0579-44bc-899c-0457f3cc67cf",
-        "0aca29c0-c2f2-4df5-af28-f76c9cdc3ed7"
+        "0aca29c0-c2f2-4df5-af28-f76c9cdc3ed7",
+        "936a1321-34a2-4f9c-aea4-b413d5129b26"
       ],
       "settings": {
         "full_width": true,
-        "pill_shape": "",
-        "title": "",
-        "background_gradient": ""
+        "pill_shape": "Choix #1 de gummies de l'année",
+        "title": "<p>Des milliers<strong> <\/strong>de clients satisfaits utilisent les gummies Beauty Boost tous les jours<\/p>",
+        "background_gradient": "linear-gradient(270deg, rgba(240, 110, 105, 1), rgba(249, 208, 163, 1) 100%)"
       }
     }
   },

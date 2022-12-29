@@ -1,4 +1,5 @@
 .reviews-section {
+  padding: 80px 80px 180px;
   background-color: rgba(250, 241, 219, 0.5) !important;
   position: relative;
   background-image: url("https://cdn.shopify.com/s/files/1/0510/6846/9429/files/wave.svg?v=1670425424") !important;
@@ -7,16 +8,7 @@
   background-repeat: no-repeat !important;
   @include media-breakpoint-down(md) {
     background-image: url("https://cdn.shopify.com/s/files/1/0510/6846/9429/files/wave_mob.svg?v=1670488755") !important;
-  }
-  .section-stack {
-    gap: 0;
-  }
-  .section {
-    background: none !important;
-    padding: 80px 80px 180px;
-    @include media-breakpoint-down(md) {
-      padding: 30px 15px 78px 15px;
-    }
+    padding: 30px 15px 78px 15px;
   }
   &__heading-wrapper {
     display: flex;
