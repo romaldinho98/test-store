@@ -1,3 +1,13 @@
 // ==========================================================================
 // ## SHOPIFY STATIC SECTION: MAIN PAGE
 // ==========================================================================
+.template-page {
+  .main-page-title {
+    margin-bottom: 0;
+  }
+  .page-title {
+    font-weight: 700;
+    font-size: 70px;
+    text-align: center;
+  }
+}

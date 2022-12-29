@@ -6,67 +6,87 @@
     <h2 class="contact-us__title"> {{ section.settings.title }}</h2>
     <div class="contact-us__subtitle"> {{ section.settings.subtitle }}</div>
     <ul class="contact-us__icons-info">
-      <li>
-        {% render 'icon-round' %}
-        <span>{{ section.settings.icon-info-1 }}</span>
-      </li>
-      <li>
-        {% render 'icon-round' %}
-        <span>{{ section.settings.icon-info-2 }}</span>
-      </li>
-      <li>
-        {% render 'icon-round' %}
-        <span>{{ section.settings.icon-info-3 }}</span>
-      </li>
+      {% if section.settings.icon-info-1 != blank %}
+        <li>
+          {% render 'icon-round' %}
+          <span>{{ section.settings.icon-info-1 }}</span>
+        </li>
+      {% endif %}
+      {% if section.settings.icon-info-2 != blank %}
+        <li>
+          {% render 'icon-round' %}
+          <span>{{ section.settings.icon-info-2 }}</span>
+        </li>
+      {% endif %}
+      {% if section.settings.icon-info-3 != blank %}
+        <li>
+          {% render 'icon-round' %}
+          <span>{{ section.settings.icon-info-3 }}</span>
+        </li>
+      {% endif %}
     </ul>
     <div class="contact-us__icons-social">
-      <li>
-        <a href="{{ section.settings.messenger }}">
-        {% render 'icon-new-messenger' %}
-        <span>Messenger</span>
-        </a>
-      </li>
-      <li>
-        <a href="{{ section.settings.telegram }}">
-          {% render 'icon-new-telegram' %}
-          <span>Telegram</span>
-        </a>
-      </li>
-      <li>
-        <a href="{{ section.settings.instagram }}">
-          {% render 'icon-new-instagram' %}
-          <span>Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a href="{{ section.settings.facebook }}">
-          {% render 'icon-new-facebook' %}
-          <span>Facebook</span>
-        </a>
-      </li>
+      {% if section.settings.messenger  != blank %}
+        <li>
+          <a href="{{ section.settings.messenger }}">
+          {% render 'icon-new-messenger' %}
+          <span>Messenger</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if section.settings.telegram  != blank %}
+        <li>
+          <a href="{{ section.settings.telegram }}">
+          {% render 'icon-new-messenger' %}
+          <span>Messenger</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if section.settings.instagram  != blank %}
+        <li>
+          <a href="{{ section.settings.instagram }}">
+          {% render 'icon-new-messenger' %}
+          <span>Messenger</span>
+          </a>
+        </li>
+      {% endif %}
+      {% if section.settings.facebook  != blank %}
+        <li>
+          <a href="{{ section.settings.facebook }}">
+          {% render 'icon-new-messenger' %}
+          <span>Messenger</span>
+          </a>
+        </li>
+      {% endif %}
     </div>
     <div class="contact-us__question-block question-block">
       <h4 class="question-block__title">{{ section.settings.question_block_title }}</h4>
       <div class="question-block__subtitle">{{ section.settings.question_block_subtitle }}</div>
       <div class="question-block__links">
-        <li>
-          <a href="{{ section.settings.btn_link_1 }}">
-            <span>{{ section.settings.btn_title_1 }}</span>
-            {% render 'icon-go-to' %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ section.settings.btn_link_2 }}">
-            <span>{{ section.settings.btn_title_2 }}</span>
-            {% render 'icon-go-to' %}
-          </a>
-        </li>
-        <li>
-          <a href="{{ section.settings.btn_link_3 }}"> 
-            <span>{{ section.settings.btn_title_3 }}</span>
-            {% render 'icon-go-to' %}
-          </a>
-        </li>
+        {% if section.settings.btn_link_1  != blank %}
+          <li>
+            <a href="{{ section.settings.btn_link_1 }}">
+              <span>{{ section.settings.btn_title_1 }}</span>
+              {% render 'icon-go-to' %}
+            </a>
+          </li>
+        {% endif %}
+        {% if section.settings.btn_link_3  != blank %}
+          <li>
+            <a href="{{ section.settings.btn_link_3 }}">
+              <span>{{ section.settings.btn_title_3 }}</span>
+              {% render 'icon-go-to' %}
+            </a>
+          </li>
+        {% endif %}
+        {% if section.settings.btn_link_3  != blank %}
+          <li>
+            <a href="{{ section.settings.btn_link_3 }}">
+              <span>{{ section.settings.btn_title_3 }}</span>
+              {% render 'icon-go-to' %}
+            </a>
+          </li>
+        {% endif %}
       </div>
     </div>
   </div>

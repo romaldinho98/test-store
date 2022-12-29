@@ -1,0 +1,126 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "633c07ca-b08c-430a-9526-09a53ee14add": {
+      "type": "versus",
+      "blocks": {
+        "template--14760871166030__633c07ca-b08c-430a-9526-09a53ee14add-16723138049e16e74b-0": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gummies-us-vs_1_9d80f053-dab7-408d-9ec7-892bf593e06d.png",
+            "argument_1": "Argument 1",
+            "argument_2": "Argument 2",
+            "argument_3": "Argument 3",
+            "argument_4": "",
+            "argument_5": "",
+            "argument_6": "",
+            "argument_7": "",
+            "argument_8": "",
+            "argument_9": "",
+            "argument_10": ""
+          }
+        },
+        "template--14760871166030__633c07ca-b08c-430a-9526-09a53ee14add-16723138049e16e74b-1": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/other_gummies_vs_section_1.png",
+            "argument_1": "Argument 1",
+            "argument_2": "Argument 2",
+            "argument_3": "Argument 3",
+            "argument_4": "",
+            "argument_5": "",
+            "argument_6": "",
+            "argument_7": "",
+            "argument_8": "",
+            "argument_9": "",
+            "argument_10": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--14760871166030__633c07ca-b08c-430a-9526-09a53ee14add-16723138049e16e74b-0",
+        "template--14760871166030__633c07ca-b08c-430a-9526-09a53ee14add-16723138049e16e74b-1"
+      ],
+      "settings": {
+        "title": "Que les bonnes choses. sans superflu.",
+        "text-content": "<p>Tous les compléments ne se valent pas. Chez Curaly on propose une qualité supérieure<\/p>",
+        "show_vs-lavel": true
+      }
+    },
+    "99c37831-9732-4bfe-86fa-143332ca54eb": {
+      "type": "faq-section",
+      "blocks": {
+        "4b605607-6616-4cd4-a252-3a69fab8e5f5": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "d1e933b5-b2ee-4b9e-ad0e-fb73716a0265": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "daf90de9-828d-4cb3-a77d-27b279914e88": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "faceddbb-1ae9-4896-a87d-59cbb0b69639": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "6803a22a-07bf-4991-8aaf-579e2362ccb0": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        },
+        "477abd73-0ea7-4abe-b0fb-ee157499f35b": {
+          "type": "text",
+          "settings": {
+            "faq_question": "What is inside the GOpure Pod?",
+            "icon_plus": "",
+            "faq_answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "4b605607-6616-4cd4-a252-3a69fab8e5f5",
+        "d1e933b5-b2ee-4b9e-ad0e-fb73716a0265",
+        "daf90de9-828d-4cb3-a77d-27b279914e88",
+        "faceddbb-1ae9-4896-a87d-59cbb0b69639",
+        "6803a22a-07bf-4991-8aaf-579e2362ccb0",
+        "477abd73-0ea7-4abe-b0fb-ee157499f35b"
+      ],
+      "settings": {
+        "faq_title": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "633c07ca-b08c-430a-9526-09a53ee14add",
+    "99c37831-9732-4bfe-86fa-143332ca54eb"
+  ]
+}

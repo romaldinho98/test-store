@@ -1,9 +1,13 @@
 <div class="section-{{ section.id }} reviews-section__container">
   <div class="reviews-section__heading-wrapper">
-    <div class="reviews-section__pill-shape">
-      <h4>{{ section.settings.pill_shape }}</h4> 
-    </div>
-    <h2 class="reviews-section__title h3">{{ section.settings.title }}</h2>
+    {%- if section.settings.pill_shape != blank -%}
+      <div class="reviews-section__pill-shape">
+        <h4>{{ section.settings.pill_shape }}</h4> 
+      </div>
+    {%- endif-%}
+    {%- if section.settings.title != blank -%}
+      <h2 class="reviews-section__title h3">{{ section.settings.title }}</h2>
+    {%- endif-%}
   </div>
   <div class="reviews-section__container reviews-section__slider-wrapper">
     <div class="swiper reviews-section__slider" style="opacity: 0">
@@ -48,15 +52,17 @@
         {% endfor %}
       </div>
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    {% if section.blocks != blank %}
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    {% endif %}
   </div>
 </div> 
 
 <script>
     new Swiper('.section-{{ section.id }} .reviews-section__slider', {
       slidesPerView: 3,
-      spaceBetween: 56,
+      spaceBetween: 60,
       navigation: {
         nextEl: ".reviews-section__slider-wrapper .swiper-button-next",
         prevEl: ".reviews-section__slider-wrapper .swiper-button-prev",
@@ -78,7 +84,7 @@
         },
         1700: {
           slidesPerView: 3,
-          spaceBetween: 50,
+          spaceBetween: 60,
         },
       },
       on: {
@@ -95,7 +101,7 @@
       {
       new Swiper('.section-{{ section.id }} .reviews-section__slider ', {
         slidesPerView: 3,
-        spaceBetween: 56,
+        spaceBetween: 60,
         navigation: {
           nextEl: ".reviews-section__slider-wrapper .swiper-button-next",
           prevEl: ".reviews-section__slider-wrapper .swiper-button-prev",
@@ -117,7 +123,7 @@
           },
           1700: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 60,
           },
         },
         on: {

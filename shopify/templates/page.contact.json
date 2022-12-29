@@ -7,19 +7,31 @@
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "13b3449f-8dc9-484d-9f78-b7f53b1ed33c": {
+      "type": "contact-us",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "title": "",
+        "subtitle": "",
+        "icon-info-1": "",
+        "icon-info-2": "",
+        "icon-info-3": "",
+        "messenger": "",
+        "telegram": "",
+        "instagram": "",
+        "facebook": "",
+        "question_block_title": "",
+        "question_block_subtitle": "",
+        "btn_title_1": "",
+        "btn_link_1": "",
+        "btn_title_2": "",
+        "btn_link_2": "",
+        "btn_title_3": "",
+        "btn_link_3": ""
       }
     }
   },
   "order": [
     "main",
-    "form"
+    "13b3449f-8dc9-484d-9f78-b7f53b1ed33c"
   ]
 }
