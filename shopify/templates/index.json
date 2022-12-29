@@ -1,38 +1,15 @@
 {
   "sections": {
-    "rich_text": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+    "1335ca60-bde4-4cbe-ae3d-4d01ff819023": {
+      "type": "hero-banner",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "title": "Welcome to Shopify Test Store",
+        "text_content": "<p>by Roman Yeliseyev<\/p>",
+        "background_gradient": ""
       }
     }
   },
   "order": [
-    "rich_text"
+    "1335ca60-bde4-4cbe-ae3d-4d01ff819023"
   ]
 }

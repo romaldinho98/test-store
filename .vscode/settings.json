@@ -1,0 +1,7 @@
+{
+  "liquid.format.enable": false,
+  "liquid.completion.schema": false,
+  "liquid.format.ignore": [
+  
+  ]
+}

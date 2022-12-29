@@ -1,0 +1,36 @@
+<div class="hero-banner" style="background: {{ section.settings.background_gradient }}">
+  <div class="hero-banner__container container">
+    {% if section.settings.title != blank %}
+      <h1>{{ section.settings.title }}</h1>
+    {% endif %}
+    {% if section.settings.text_content != blank %}
+      <div>{{ section.settings.text_content }}</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Hero banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }, {
+        "type": "richtext",
+        "id": "text_content",
+        "label": "Text Content"
+      }, {
+        "type": "color_background",
+        "id": "background_gradient",
+        "label": "Heading gradient color"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero banner"
+      }
+    ]
+  }
+{% endschema %}
