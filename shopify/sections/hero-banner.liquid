@@ -3,8 +3,8 @@
     {% if section.settings.title != blank %}
       <h1>{{ section.settings.title }}</h1>
     {% endif %}
-    {% if section.settings.text_content != blank %}
-      <div>{{ section.settings.text_content }}</div>
+    {% if section.settings.subtitle != blank %}
+      <h4>{{ section.settings.subtitle }}</h4>
     {% endif %}
   </div>
 </div>
@@ -17,11 +17,13 @@
         "type": "text",
         "id": "title",
         "label": "Title"
-      }, {
-        "type": "richtext",
-        "id": "text_content",
-        "label": "Text Content"
-      }, {
+      }, 
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+      }, 
+      {
         "type": "color_background",
         "id": "background_gradient",
         "label": "Heading gradient color"

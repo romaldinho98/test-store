@@ -116,11 +116,55 @@
       "settings": {
         "faq_title": "Frequently Asked Questions"
       }
+    },
+    "97afc57c-ba5d-4898-9516-36a78e3165cc": {
+      "type": "image-with-carousel-text",
+      "blocks": {
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-0": {
+          "type": "card",
+          "settings": {
+            "title": "COMPREHENSIVE INGREDIENTS",
+            "text": "<p>Using only the best natural and clinically proven ingredients, Klova patches deliver a precise blend of each physician approved formula for up to eight consecutive hours. This helps eliminate using multiple products, and saves you money.<\/p>"
+          }
+        },
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-1": {
+          "type": "card",
+          "settings": {
+            "title": "THE DIFFERENCE IS THE DELIVERY",
+            "text": "<p>Transdermal absorption is not a new concept, and every skin care product and topical medication uses it. So why not give your stomach a break, make the most of your body’s ability to absorb micronutrients, and optimize your sleep and focus?<\/p>"
+          }
+        },
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-2": {
+          "type": "card",
+          "settings": {
+            "title": "WELLNESS THAT STICKS",
+            "text": "<p>Conveniently optimize your days and nights with Klova patches. Just one Extra Strength Sleep Patch helps support optimized sleep, while just one Nootropic Focus Patch helps support optimized focus, clarity and presence.<\/p>"
+          }
+        },
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-3": {
+          "type": "card",
+          "settings": {
+            "title": "PEEL. STICK. OPTIMIZE.",
+            "text": "<p>It’s hard to get optimized when most oral sleep and focus support products cause stomach discomfort (according to their reviews). Klova solved that with industry leading, transdermal technology. Simply peel, stick and optimize your day or night.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-0",
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-1",
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-2",
+        "template--14760871166030__97afc57c-ba5d-4898-9516-36a78e3165cc-167240597256da01b8-3"
+      ],
+      "settings": {
+        "title": "Patches with purpose:\nOne patch for sleep.\nOne patch for focus.",
+        "img": "shopify:\/\/shop_images\/Optimize_1_1.png"
+      }
     }
   },
   "order": [
     "main",
     "633c07ca-b08c-430a-9526-09a53ee14add",
-    "99c37831-9732-4bfe-86fa-143332ca54eb"
+    "99c37831-9732-4bfe-86fa-143332ca54eb",
+    "97afc57c-ba5d-4898-9516-36a78e3165cc"
   ]
 }

@@ -3,8 +3,8 @@
     "1335ca60-bde4-4cbe-ae3d-4d01ff819023": {
       "type": "hero-banner",
       "settings": {
-        "title": "Welcome to Shopify Test Store",
-        "text_content": "<p>by Roman Yeliseyev<\/p>",
+        "title": "Welcome to the Shopify Test Store",
+        "subtitle": "by Roman Yeliseyev",
         "background_gradient": ""
       }
     }
